@@ -5,9 +5,10 @@ return {
 		weight = 220,
 		degrade = 60,
 		client = {
-			status = { hunger = 400000 },
-			anim = 'mangiare',
-			prop = 'hamburger',
+			image = 'burger_chicken.png',
+			status = { hunger = 200000 },
+			anim = 'eating',
+			prop = 'burger',
 			usetime = 2500,
 			export = 'ox_inventory_examples.testburger'
 		},
@@ -166,14 +167,14 @@ return {
 		},
 	},
 
-	['cola'] = {
-		label = 'eCola',
+	['sprunk'] = {
+		label = 'Sprunk',
 		weight = 350,
 		consume = 0.50,
 		client = {
 			status = { thirst = 400000 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-			prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+			prop = { model = `prop_ld_can_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 			usetime = 2500,
 			notification = 'Hai placato la tua sete con la cola'
 		}

@@ -49,10 +49,6 @@ function Inventory.CanAccessTrunk(entity)
     offset = GetOffsetFromEntityInWorldCoords(entity, offset.x, offset.y, offset.z)
 
     if #(GetEntityCoords(cache.ped) - offset) < 1.5 then
-        local coords = GetEntityCoords(entity)
-
-        TaskTurnPedToFaceCoord(cache.ped, coords.x, coords.y, coords.z, 0)
-
         return doorId
     end
 end
@@ -63,17 +59,11 @@ function Inventory.OpenTrunk(entity)
 
     if not door then return end
 
-    if GetVehicleDoorLockStatus(entity) > 1 then
-        return lib.notify({ id = 'vehicle_locked', type = 'error', description = locale('vehicle_locked') })
-    end
-
-    local plate = GetVehicleNumberPlateText(entity)
-    local invId = 'trunk'..plate
     local coords = GetEntityCoords(entity)
 
     TaskTurnPedToFaceCoord(cache.ped, coords.x, coords.y, coords.z, 0)
 
-    if not client.openInventory('trunk', { id = invId, netid = NetworkGetNetworkIdFromEntity(entity), entityid = entity, door = door }) then return end
+    if not client.openInventory('trunk', { netid = NetworkGetNetworkIdFromEntity(entity), entityid = entity, door = door }) then return end
 
     if type(door) == 'table' then
         for i = 1, #door do
@@ -287,15 +277,17 @@ local function openEvidence()
 	client.openInventory('policeevidence')
 end
 
----@param point CPoint
-local function nearbyEvidence(point)
-	---@diagnostic disable-next-line: param-type-mismatch
-	DrawMarker(2, point.coords.x, point.coords.y, point.coords.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.2, 0.15, 30, 30, 150, 222, false, false, 0, true, false, false, false)
-
-	if point.isClosest and point.currentDistance < 1.2 and IsControlJustReleased(0, 38) then
-		openEvidence()
-	end
-end
+local markerColour = { 30, 30, 150 }
+local textPrompts = {
+    evidence = {
+        options = { icon = 'fa-box-archive' },
+        message = ('**%s**  \n%s'):format(locale('open_police_evidence'), locale('interact_prompt', GetControlInstructionalButton(0, 38, true):sub(3)))
+    },
+    stash = {
+        options = { icon = 'fa-warehouse' },
+        message = ('**%s**  \n%s'):format(locale('open_stash'), locale('interact_prompt', GetControlInstructionalButton(0, 38, true):sub(3)))
+    }
+}
 
 Inventory.Evidence = setmetatable(lib.load('data.evidence'), {
 	__call = function(self)
@@ -326,18 +318,15 @@ Inventory.Evidence = setmetatable(lib.load('data.evidence'), {
 						coords = evidence.coords,
 						distance = 16,
 						inv = 'policeevidence',
-						nearby = nearbyEvidence
+						marker = markerColour,
+                        prompt = textPrompts.evidence,
+						nearby = Utils.nearbyMarker
 					})
 				end
 			end
 		end
 	end
 })
-
-local function nearbyStash(self)
-	---@diagnostic disable-next-line: param-type-mismatch
-	DrawMarker(2, self.coords.x, self.coords.y, self.coords.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.2, 0.15, 30, 30, 150, 222, false, false, 0, true, false, false, false)
-end
 
 Inventory.Stashes = setmetatable(lib.load('data.stashes'), {
 	__call = function(self)
@@ -373,7 +362,9 @@ Inventory.Stashes = setmetatable(lib.load('data.stashes'), {
 						distance = 16,
 						inv = 'stash',
 						invId = stash.name,
-						nearby = nearbyStash
+						marker = markerColour,
+                        prompt = textPrompts.stash,
+						nearby = Utils.nearbyMarker
 					})
 				end
 			end

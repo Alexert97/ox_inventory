@@ -91,7 +91,6 @@ local function createShop(shopType, id)
         coords = store
     end
 
-	---@type OxShop
 	shop[id] = {
 		label = shop.name,
 		id = shopType..' '..id,
@@ -108,7 +107,7 @@ local function createShop(shopType, id)
 	return shop[id]
 end
 
-for shopType, shopDetails in pairs(lib.load('data.shops')) do
+for shopType, shopDetails in pairs(lib.load('data.shops') or {}) do
 	registerShopType(shopType, shopDetails)
 end
 
@@ -154,7 +153,7 @@ lib.callback.register('ox_inventory:openShop', function(source, data)
 end)
 
 local function canAffordItem(inv, currency, price)
-	local canAfford = price >= 0 and Inventory.GetItem(inv, currency, false, true) >= price
+	local canAfford = price >= 0 and Inventory.GetItemCount(inv, currency) >= price
 
 	return canAfford or {
 		type = 'error',
@@ -249,6 +248,7 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
 					shopId = shopId,
 					toInventory = playerInv.id,
 					toSlot = data.toSlot,
+					fromSlot = fromData,
 					itemName = fromData.name,
 					metadata = metadata,
 					count = count,

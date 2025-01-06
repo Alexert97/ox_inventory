@@ -22,6 +22,9 @@ shared = {
     ambulance = json.decode(GetConvar('inventory:ambulance', '["ambulance"]')),
 }
 
+shared.dropslots = GetConvarInt('inventory:dropslots', shared.playerslots)
+shared.dropweight = GetConvarInt('inventory:dropslotcount', shared.playerweight)
+
 do
     if type(shared.police) == 'string' then
         shared.police = { shared.police }
@@ -60,7 +63,7 @@ if IsDuplicityVersion() then
         trimplate = GetConvarInt('inventory:trimplate', 1) == 1,
         vehicleloot = json.decode(GetConvar('inventory:vehicleloot', [[
 			[
-				["cola", 1, 1],
+				["sprunk", 1, 1],
 				["water", 1, 1],
 				["garbage", 1, 2, 50],
 				["panties", 1, 1, 5],
@@ -96,12 +99,14 @@ else
         giveplayerlist = GetConvarInt('inventory:giveplayerlist', 0) == 1,
         weaponanims = GetConvarInt('inventory:weaponanims', 1) == 1,
         itemnotify = GetConvarInt('inventory:itemnotify', 1) == 1,
+        weaponnotify = GetConvarInt('inventory:weaponnotify', 1) == 1,
         imagepath = GetConvar('inventory:imagepath', 'nui://ox_inventory/web/images'),
         dropprops = GetConvarInt('inventory:dropprops', 0) == 1,
         dropmodel = joaat(GetConvar('inventory:dropmodel', 'prop_med_bag_01b')),
         weaponmismatch = GetConvarInt('inventory:weaponmismatch', 1) == 1,
         ignoreweapons = json.decode(GetConvar('inventory:ignoreweapons', '[]')),
         suppresspickups = GetConvarInt('inventory:suppresspickups', 1) == 1,
+        disableweapons = GetConvarInt('inventory:disableweapons', 0) == 1,
     }
 
     local ignoreweapons = table.create(0, (client.ignoreweapons and #client.ignoreweapons or 0) + 3)
@@ -122,7 +127,7 @@ end
 
 function shared.print(...) print(string.strjoin(' ', ...)) end
 
-function shared.info(...) shared.print('^2[info]^7', ...) end
+function shared.info(...) lib.print.info(string.strjoin(' ', ...)) end
 
 ---Throws a formatted type error.
 ---```lua

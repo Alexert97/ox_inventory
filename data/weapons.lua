@@ -1,11 +1,26 @@
 return {
 	Weapons = {
+		['WEAPON_BATTLERIFLE'] = {
+			label = 'Battle Rifle',
+			weight = 3300,
+			durability = 0.03,
+			ammoname = 'ammo-rifle2',
+		},
+
+		['WEAPON_SNOWLAUNCHER'] = {
+			label = 'Snowball Launcher',
+			weight = 1000,
+			durability = 0.03,
+			ammoname = 'WEAPON_SNOWBALL',
+		},
+
 		['WEAPON_TECPISTOL'] = {
 			label = 'Tactical SMG',
 			weight = 1500,
 			durability = 0.075,
 			ammoname = 'ammo-9',
 		},
+
 		['WEAPON_ADVANCEDRIFLE'] = {
 			label = 'Advanced Rifle',
 			weight = 3100,
@@ -239,6 +254,7 @@ return {
 		['WEAPON_FIREEXTINGUISHER'] = {
 			label = 'Fire Extinguisher',
 			weight = 8616,
+            durability = 0.006
 		},
 
 		['WEAPON_FIREWORK'] = {
@@ -470,8 +486,8 @@ return {
 		},
 
 		['WEAPON_PETROLCAN'] = {
-			label = 'Gas Can',
-			weight = 12000,
+			label = 'Jerry Can',
+			weight = 4000,
 		},
 
 		['WEAPON_GADGETPISTOL'] = {
@@ -812,6 +828,7 @@ return {
 			weight = 280,
 			type = 'muzzle',
 			client = {
+                image = 'at_suppressor.png',
 				component = {
 					`COMPONENT_AT_PI_SUPP`,
 					`COMPONENT_AT_PI_SUPP_02`,
@@ -827,11 +844,12 @@ return {
 			weight = 280,
 			type = 'muzzle',
 			client = {
+                image = 'at_suppressor.png',
 				component = {
 					`COMPONENT_AT_AR_SUPP`,
 					`COMPONENT_AT_AR_SUPP_02`,
 					`COMPONENT_AT_SR_SUPP`,
-					`COMPONENT_AT_SR_SUPP_03`
+					`COMPONENT_AT_SR_SUPP_03`,
 				},
 				usetime = 2500
 			}
@@ -874,6 +892,7 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
+                image = 'at_clip_extended.png',
 				component = {
 					`COMPONENT_APPISTOL_CLIP_02`,
 					`COMPONENT_CERAMICPISTOL_CLIP_02`,
@@ -896,6 +915,7 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
+                image = 'at_clip_extended.png',
 				component = {
 					`COMPONENT_ASSAULTSMG_CLIP_02`,
 					`COMPONENT_COMBATPDW_CLIP_02`,
@@ -914,6 +934,7 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
+                image = 'at_clip_extended2.png',
 				component = {
 					`COMPONENT_ASSAULTSHOTGUN_CLIP_02`,
 					`COMPONENT_HEAVYSHOTGUN_CLIP_02`,
@@ -939,6 +960,7 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
+                image = 'at_clip_extended2.png',
 				component = {
 					`COMPONENT_ADVANCEDRIFLE_CLIP_02`,
 					`COMPONENT_ASSAULTRIFLE_CLIP_02`,
@@ -953,6 +975,7 @@ return {
 					`COMPONENT_SPECIALCARBINE_CLIP_02`,
 					`COMPONENT_SPECIALCARBINE_MK2_CLIP_02`,
 					`COMPONENT_TACTICALRIFLE_CLIP_02`,
+					`COMPONENT_BATTLERIFLE_CLIP_02`,
 				},
 				usetime = 2500
 			}
@@ -963,6 +986,7 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
+                image = 'at_clip_drum.png',
 				component = {
 					`COMPONENT_GUSENBERG_CLIP_02`,
 					`COMPONENT_MG_CLIP_02`,
@@ -978,6 +1002,7 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
+                image = 'at_clip_extended2.png',
 				component = {
 					`COMPONENT_HEAVYSNIPER_MK2_CLIP_02`,
 					`COMPONENT_MARKSMANRIFLE_CLIP_02`,
@@ -992,6 +1017,7 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
+                image = 'at_clip_drum.png',
 				component = {
 					`COMPONENT_COMBATPDW_CLIP_03`,
 					`COMPONENT_MACHINEPISTOL_CLIP_03`,
@@ -1006,6 +1032,7 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
+                image = 'at_clip_drum.png',
 				component = {
 					`COMPONENT_HEAVYSHOTGUN_CLIP_03`
 				},
@@ -1018,6 +1045,7 @@ return {
 			type = 'magazine',
 			weight = 280,
 			client = {
+                image = 'at_clip_drum.png',
 				component = {
 					`COMPONENT_ASSAULTRIFLE_CLIP_03`,
 					`COMPONENT_COMPACTRIFLE_CLIP_03`,
