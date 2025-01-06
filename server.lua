@@ -463,7 +463,7 @@ lib.addCommand({'additem', 'giveitem'}, {
 		{ name = 'count', type = 'number', help = 'The amount of the item to give', optional = true },
 		{ name = 'type', help = 'Sets the "type" metadata to the value', optional = true },
 	},
-	restricted = 'group.admin',
+	restricted = {'group.admin', 'group.gamemaster'},
 }, function(source, args)
 	local item = Items(args.item)
 

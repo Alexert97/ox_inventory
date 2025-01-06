@@ -1,17 +1,17 @@
 return {
 	{
-		coords = vec3(452.3, -991.4, 30.7),
+		coords = vec3(463.7391, -996.0149, 30.6896),
 		target = {
-			loc = vec3(451.25, -994.28, 30.69),
+			loc = vec3(463.7391, -996.0149, 30.6896),
 			length = 1.2,
 			width = 5.6,
-			heading = 0,
+			heading = 118.5508,
 			minZ = 29.49,
 			maxZ = 32.09,
-			label = 'Open personal locker'
+			label = 'Apri il deposito personale'
 		},
 		name = 'policelocker',
-		label = 'Personal locker',
+		label = 'Deposito personale',
 		owner = true,
 		slots = 70,
 		weight = 70000,
@@ -19,21 +19,40 @@ return {
 	},
 
 	{
-		coords = vec3(301.3, -600.23, 43.28),
+		coords = vec3(852.6699, -1312.1138, 28.2449),
 		target = {
-			loc = vec3(301.82, -600.99, 43.29),
-			length = 0.6,
-			width = 1.8,
-			heading = 340,
-			minZ = 43.34,
-			maxZ = 44.74,
-			label = 'Open personal locker'
+			loc = vec3(852.6699, -1312.1138, 28.2449),
+			length = 1.2,
+			width = 5.6,
+			heading = 118.5508,
+			minZ = 29.49,
+			maxZ = 32.09,
+			label = 'Apri il deposito personale'
 		},
-		name = 'emslocker',
-		label = 'Personal Locker',
+		name = 'policelocker',
+		label = 'Deposito personale',
 		owner = true,
 		slots = 70,
 		weight = 70000,
-		groups = {['ambulance'] = 0}
+		groups = shared.police
+	},
+
+	{
+		coords = vec3(-663.5849, 323.4299, 92.7443),
+		target = {
+			loc = vec3(-663.7119, 323.8240, 92.3642),
+			length = 1.2,
+			width = 5.6,
+			heading = 1.1133,
+			minZ = 43.34,
+			maxZ = 44.74,
+			label = 'Apri il deposito personale'
+		},
+		name = 'emslocker',
+		label = 'Deposito personale',
+		owner = true,
+		slots = 70,
+		weight = 70000,
+		groups = shared.ambulance
 	},
 }

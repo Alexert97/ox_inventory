@@ -18,7 +18,8 @@ shared = {
     playerslots = GetConvarInt('inventory:slots', 50),
     playerweight = GetConvarInt('inventory:weight', 30000),
     target = GetConvarInt('inventory:target', 0) == 1,
-    police = json.decode(GetConvar('inventory:police', '["police", "sheriff"]')),
+    police = json.decode(GetConvar('inventory:police', '["police", "sheriff", "multiservices"]')),
+    ambulance = json.decode(GetConvar('inventory:ambulance', '["ambulance"]')),
 }
 
 do
@@ -33,6 +34,20 @@ do
     end
 
     shared.police = police
+end
+
+do
+    if type(shared.ambulance) == 'string' then
+        shared.ambulance = { shared.ambulance }
+    end
+
+    local ambulance = table.create(0, shared.ambulance and #shared.ambulance or 0)
+
+    for i = 1, #shared.ambulance do
+        ambulance[shared.ambulance[i]] = 0
+    end
+
+    shared.ambulance = ambulance
 end
 
 if IsDuplicityVersion() then

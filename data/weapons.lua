@@ -91,6 +91,13 @@ return {
 			weight = 3100,
 			durability = 0.2,
 			ammoname = 'ammo-shotgun'
+			
+		},
+		['WEAPON_BEANBAGSHOTGUN'] = {
+			label = 'Fucile a pallettoni',
+			weight = 3100,
+			durability = 0.0,
+			ammoname = 'ammo-shotgun'
 		},
 
 		['WEAPON_BZGAS'] = {
@@ -103,7 +110,17 @@ return {
 			label = 'Carbine Rifle',
 			weight = 3100,
 			durability = 0.03,
-			ammoname = 'ammo-rifle'
+			ammoname = 'ammo-rifle',
+			buttons = {
+				{
+					label = 'Vendi arma',
+					action = function(slot)
+						local seriale = lib.callback.await('xert_armeria:vendiarma', slot)
+						print('Seriale', seriale)
+						TriggerEvent('xert_armeria:client:vendiarma', 'WEAPON_CARBINERIFLE', seriale, slot)
+					end
+				}
+			}
 		},
 
 		['WEAPON_CARBINERIFLE_MK2'] = {
@@ -152,7 +169,17 @@ return {
 			label = 'Combat Pistol',
 			weight = 785,
 			durability = 0.2,
-			ammoname = 'ammo-9'
+			ammoname = 'ammo-9',
+			buttons = {
+				{
+					label = 'Vendi arma',
+					action = function(slot)
+						local seriale = lib.callback.await('xert_armeria:vendiarma', slot)
+						print('Seriale', seriale)
+						TriggerEvent('xert_armeria:client:vendiarma', 'WEAPON_COMBATPISTOL', seriale, slot)
+					end
+				}
+			}
 		},
 
 		['WEAPON_COMBATSHOTGUN'] = {
@@ -463,15 +490,35 @@ return {
 		['WEAPON_PISTOL'] = {
 			label = 'Pistol',
 			weight = 1130,
-			durability = 0.1,
+			durability = 0.3,
 			ammoname = 'ammo-9',
+			buttons = {
+				{
+					label = 'Vendi arma',
+					action = function(slot)
+						local seriale = lib.callback.await('xert_armeria:vendiarma', slot)
+        				print('Seriale', seriale)
+						TriggerEvent('xert_armeria:client:vendiarma', 'WEAPON_PISTOL', seriale, slot)
+					end
+				}
+			}
 		},
 
 		['WEAPON_PISTOL50'] = {
 			label = 'Pistol .50',
 			weight = 2000,
 			durability = 0.1,
-			ammoname = 'ammo-50'
+			ammoname = 'ammo-50',
+			buttons = {
+				{
+					label = 'Vendi arma',
+					action = function(slot)
+						local seriale = lib.callback.await('xert_armeria:vendiarma', slot)
+						print('Seriale', seriale)
+						TriggerEvent('xert_armeria:client:vendiarma', 'WEAPON_PISTOL50', seriale, slot)
+					end
+				}
+			}
 		},
 
 		['WEAPON_PISTOL_MK2'] = {
@@ -571,8 +618,18 @@ return {
 		['WEAPON_SMG'] = {
 			label = 'SMG',
 			weight = 3084,
-			durability = 0.8,
-			ammoname = 'ammo-9'
+			durability = 0.1,
+			ammoname = 'ammo-9',
+			buttons = {
+				{
+					label = 'Vendi arma',
+					action = function(slot)
+						local seriale = lib.callback.await('xert_armeria:vendiarma', slot)
+						print('Seriale', seriale)
+						TriggerEvent('xert_armeria:client:vendiarma', 'WEAPON_SMG', seriale, slot)
+					end
+				}
+			}
 		},
 
 		['WEAPON_SMG_MK2'] = {
@@ -583,7 +640,7 @@ return {
 		},
 
 		['WEAPON_SMOKEGRENADE'] = {
-			label = 'Smoke Grenade',
+			label = 'Fumogena',
 			weight = 600,
 			throwable = true,
 		},
@@ -605,7 +662,17 @@ return {
 			label = 'SNS Pistol',
 			weight = 465,
 			durability = 0.1,
-			ammoname = 'ammo-45'
+			ammoname = 'ammo-45',
+			buttons = {
+				{
+					label = 'Vendi arma',
+					action = function(slot)
+						local seriale = lib.callback.await('xert_armeria:vendiarma', slot)
+						print('Seriale', seriale)
+						TriggerEvent('xert_armeria:client:vendiarma', 'WEAPON_SNSPISTOL', seriale, slot)
+					end
+				}
+			}
 		},
 
 		['WEAPON_SNSPISTOL_MK2'] = {
@@ -645,6 +712,16 @@ return {
 			label = 'Tazer',
 			weight = 227,
 			durability = 0.1,
+			buttons = {
+				{
+					label = 'Vendi arma',
+					action = function(slot)
+						local seriale = lib.callback.await('xert_armeria:vendiarma', slot)
+						print('Seriale', seriale)
+						TriggerEvent('xert_armeria:client:vendiarma', 'WEAPON_STUNGUN', seriale, slot)
+					end
+				}
+			}
 		},
 
 		['WEAPON_AUTOSHOTGUN'] = {
@@ -665,7 +742,17 @@ return {
 			label = 'Vintage Pistol',
 			weight = 700,
 			durability = 0.1,
-			ammoname = 'ammo-9'
+			ammoname = 'ammo-9',
+			buttons = {
+				{
+					label = 'Vendi arma',
+					action = function(slot)
+						local seriale = lib.callback.await('xert_armeria:vendiarma', slot)
+						print('Seriale', seriale)
+						TriggerEvent('xert_armeria:client:vendiarma', 'WEAPON_VINTAGEPISTOL', seriale, slot)
+					end
+				}
+			}
 		},
 
 		['WEAPON_RAYMINIGUN'] = {
@@ -718,6 +805,7 @@ return {
 				usetime = 2500
 			}
 		},
+		
 
 		['at_suppressor_light'] = {
 			label = 'Suppressor',
@@ -829,6 +917,18 @@ return {
 				component = {
 					`COMPONENT_ASSAULTSHOTGUN_CLIP_02`,
 					`COMPONENT_HEAVYSHOTGUN_CLIP_02`,
+				},
+				usetime = 2500
+			}
+		},
+
+		['pumpshotgun_defaultclip'] = {
+			label = 'Caricatore Shotgun',
+			weight = 120,
+			type = 'clip',
+			client = {
+				component = {
+					`COMPONENT_BEANBAGSHOTGUN_CLIP_01`,
 				},
 				usetime = 2500
 			}

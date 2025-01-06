@@ -36,6 +36,7 @@ local playerPed = cache.ped
 
 lib.onCache('ped', function(ped)
 	playerPed = ped
+	--print(json.encode(ped))
 	Utils.WeaponWheel()
 end)
 
@@ -44,6 +45,15 @@ plyState:set('invHotkeys', false, false)
 plyState:set('canUseWeapons', false, false)
 
 local function canOpenInventory()
+	--print(json.encode(playerPed))
+	--print('canOpen', json.encode(PlayerData, {indent = true}))
+	--[[if IsPedFatallyInjured(ped) or IsEntityPlayingAnim(ped, 'dead', 'dead_a', 3) or IsPedCuffed(ped) or IsEntityPlayingAnim(ped, 'mp_arresting', 'idle', 3)
+	or IsEntityPlayingAnim(ped, 'missminuteman_1ig_2', 'handsup_base', 3) or IsEntityPlayingAnim(ped, 'missminuteman_1ig_2', 'handsup_enter', 3)
+	or IsEntityPlayingAnim(ped, 'random@mugging3', 'handsup_standing_base', 3) then
+		print(IsPedFatallyInjured(ped), IsEntityPlayingAnim(ped, 'dead', 'dead_a', 3), IsPedCuffed(ped), IsEntityPlayingAnim(ped, 'mp_arresting', 'idle', 3), IsEntityPlayingAnim(ped, 'missminuteman_1ig_2', 'handsup_base', 3), IsEntityPlayingAnim(ped, 'missminuteman_1ig_2', 'handsup_enter', 3), IsEntityPlayingAnim(ped, 'random@mugging3', 'handsup_standing_base', 3))	
+		return shared.info("Non puoi aprire l'inventario", 'Sei morto o in arresto')
+	end]]
+
     if not PlayerData.loaded then
         return shared.info('cannot open inventory', '(is not loaded)')
     end
@@ -54,7 +64,7 @@ local function canOpenInventory()
         return shared.info('cannot open inventory', '(is busy)')
     end
 
-    if PlayerData.dead or IsPedFatallyInjured(playerPed) then
+    if PlayerData.dead then
         return shared.info('cannot open inventory', '(fatal injury)')
     end
 
@@ -175,9 +185,9 @@ function client.openInventory(inv, data)
 
 			local targetCoords = targetPed and GetEntityCoords(targetPed)
 
-			if not targetCoords or #(targetCoords - GetEntityCoords(playerPed)) > 1.8 or not (client.hasGroup(shared.police) or canOpenTarget(targetPed)) then
+			--[[if not targetCoords or #(targetCoords - GetEntityCoords(playerPed)) > 1.8 or not (client.hasGroup(shared.police) or canOpenTarget(targetPed)) then
 				return lib.notify({ id = 'inventory_right_access', type = 'error', description = locale('inventory_right_access') })
-			end
+			end]]
 		end
 
 		if inv == 'shop' and invOpen == false then
@@ -319,7 +329,7 @@ RegisterNetEvent('ox_inventory:forceOpenInventory', function(left, right)
 	if client.screenblur then TriggerScreenblurFadeIn(0) end
 
 	currentInventory = right or defaultInventory
-	currentInventory.ignoreSecurityChecks = true
+	currentInventory.ignoreSecurityChecks = false
 	left.items = PlayerData.inventory
 	left.groups = PlayerData.groups
 
@@ -504,8 +514,9 @@ local function useSlot(slot)
 
             GiveWeaponToPed(playerPed, data.hash, 0, false, true)
             SetCurrentPedWeapon(playerPed, data.hash, false)
-
+			print(data.hash, GetSelectedPedWeapon(playerPed), GetWeapontypeModel(data.hash), GetWeapontypeModel(GetSelectedPedWeapon(playerPed)))
             if data.hash ~= GetSelectedPedWeapon(playerPed) then
+				print(data.hash, GetSelectedPedWeapon(playerPed))
                 return lib.notify({ type = 'error', description = locale('cannot_use', data.label) })
             end
 
@@ -668,10 +679,40 @@ local function useButton(id, slot)
 	end
 end
 
+local function openNearbyInventory()
+	if canOpenInventory() then
+
+		local ESX = exports.es_extended:getSharedObject()
+		local closestPlayer, closestDistance = ESX.Game.GetClosestPlayer()
+		if	GetSelectedPedWeapon(cache.ped) ~= GetHashKey("WEAPON_UNARMED") then
+			local ESX = exports.es_extended:getSharedObject()
+			ESX.SelectPlayer('Seleziona un player' , 3, function(player)
+				local id = GetPlayerFromServerId(player)
+				local ped = GetPlayerPed(id)
+				if player then
+					--if canOpenTarget(ped) then
+						client.openInventory('player', player)
+						ExecuteCommand("me Sta effettuando una ~r~ perquisizione ~w~")
+					--else
+						--lib.notify({ type = 'error', description = "Non puoi lootare questo player!" })
+					--end
+				else
+					lib.notify({ type = 'error', description = "Sei troppo lontanto, o non c'è nessun cittadino nelle vicinanze" })
+				end
+			end)
+		else
+			lib.notify({ type = 'error', description = "Non hai un arma in mano!" })
+		end
+	end
+end
+exports('openNearbyInventory', openNearbyInventory)
+
+--[[
+
 local function openNearbyInventory() client.openInventory('player') end
 
 exports('openNearbyInventory', openNearbyInventory)
-
+]]
 local currentInstance
 local playerCoords
 local Shops = require 'modules.shops.client'
@@ -1312,7 +1353,7 @@ RegisterNetEvent('ox_inventory:setPlayerInventory', function(currentDrops, inven
 				playerCoords = GetEntityCoords(playerPed)
 
 				if currentInventory and not currentInventory.ignoreSecurityChecks then
-					if currentInventory.type == 'otherplayer' then
+					--[[if currentInventory.type == 'otherplayer' then
 						local id = GetPlayerFromServerId(currentInventory.id)
 						local ped = GetPlayerPed(id)
 						local pedCoords = GetEntityCoords(ped)
@@ -1327,7 +1368,7 @@ RegisterNetEvent('ox_inventory:setPlayerInventory', function(currentDrops, inven
 					elseif currentInventory.coords and (#(playerCoords - currentInventory.coords) > (currentInventory.distance or 2.0) or canOpenTarget(playerPed)) then
 						client.closeInventory()
 						lib.notify({ id = 'inventory_lost_access', type = 'error', description = locale('inventory_lost_access') })
-					end
+					end]]
 				end
 			end
 		end
@@ -1527,7 +1568,7 @@ RegisterNetEvent('ox_inventory:viewInventory', function(left, right)
 	if client.screenblur then TriggerScreenblurFadeIn(0) end
 
 	currentInventory = right or defaultInventory
-	currentInventory.ignoreSecurityChecks = true
+	currentInventory.ignoreSecurityChecks = false
     currentInventory.type = 'inspect'
 	left.items = PlayerData.inventory
 	left.groups = PlayerData.groups
@@ -1625,6 +1666,7 @@ local function isGiveTargetValid(ped, coords)
     return entity == ped and IsEntityVisible(ped)
 end
 
+--[[
 RegisterNUICallback('giveItem', function(data, cb)
 	cb(1)
 
@@ -1689,6 +1731,27 @@ RegisterNUICallback('giveItem', function(data, cb)
     if entity and IsPedAPlayer(entity) and IsEntityVisible(entity) and #(GetEntityCoords(playerPed, true) - GetEntityCoords(entity, true)) < 3.0 then
         return giveItemToTarget(GetPlayerServerId(NetworkGetPlayerIndexFromPed(entity)), data.slot, data.count)
     end
+end)
+]]
+
+RegisterNUICallback('giveItem', function(data, cb)
+	cb(1)
+	client.closeInventory()
+	local ESX = exports.es_extended:getSharedObject()
+	ESX.SelectPlayer('Seleziona un player' , 3, function(player)
+		if player then
+			Utils.PlayAnim(2000, 'mp_common', 'givetake1_a', 1.0, 1.0, -1, 50, 0.0, 0, 0, 0)
+			TriggerServerEvent('ox_inventory:giveItem', data.slot, player, data.count)
+			--remove animation stuck
+			Wait(500)
+			ClearPedTasksImmediately(playerPed)
+		
+			if data.slot == currentWeapon?.slot then
+				currentWeapon = Weapon.Disarm(currentWeapon)
+			end
+		end
+
+	end)
 end)
 
 RegisterNUICallback('useButton', function(data, cb)

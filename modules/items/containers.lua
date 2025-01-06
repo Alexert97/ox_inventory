@@ -63,4 +63,21 @@ setContainerProperties('pizzabox', {
 	whitelist = { 'pizza' }
 })
 
+setContainerProperties('portachiavi', {
+	slots = 10,
+	maxWeight = 1000,
+	whitelist = { 'chiave_veicolo' }
+})
+setContainerProperties('portachiavi_casa', {
+	slots = 10,
+	maxWeight = 1000,
+	whitelist = { 'chiave_casa' }
+})
+
+setContainerProperties('portafoglio', {
+	slots = 10,
+	maxWeight = 1000,
+	whitelist = { 'money', 'black_money', 'documents', 'drive', 'weapon', 'boat', 'plane', 'policebadge', 'emsbadge', 'referenze' }
+})
+
 return containers
