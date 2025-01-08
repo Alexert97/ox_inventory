@@ -186,14 +186,11 @@ function client.openInventory(inv, data)
             targetPed = targetId and GetPlayerPed(targetId)
         end
 
-			--[[if not targetCoords or #(targetCoords - GetEntityCoords(playerPed)) > 1.8 or not (client.hasGroup(shared.police) or canOpenTarget(targetPed)) then
-				return lib.notify({ id = 'inventory_right_access', type = 'error', description = locale('inventory_right_access') })
-			end]]
-		end
+			--[[
 
         if not targetCoords or #(targetCoords - GetEntityCoords(playerPed)) > 1.8 or not (client.hasGroup(shared.police) or canOpenTarget(targetPed)) then
             return lib.notify({ id = 'inventory_right_access', type = 'error', description = locale('inventory_right_access') })
-        end
+        end]]
     end
 
     if inv == 'shop' and invOpen == false then

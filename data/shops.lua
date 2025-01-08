@@ -72,25 +72,25 @@ return {
 		}
 	},
 
-	PoliceArmoury = {
-		name = 'Police Armoury',
-		groups = shared.police,
-		blip = {
-			id = 110, colour = 84, scale = 0.8
-		}, inventory = {
-			{ name = 'ammo-9', price = 5, },
-			{ name = 'ammo-rifle', price = 5, },
-			{ name = 'WEAPON_FLASHLIGHT', price = 200 },
-			{ name = 'WEAPON_NIGHTSTICK', price = 100 },
-			{ name = 'WEAPON_PISTOL', price = 500, metadata = { registered = true, serial = 'POL' }, license = 'weapon' },
-			{ name = 'WEAPON_CARBINERIFLE', price = 1000, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 3 },
-			{ name = 'WEAPON_STUNGUN', price = 500, metadata = { registered = true, serial = 'POL'} }
-		}, locations = {
-			vec3(451.51, -979.44, 30.68)
-		}, targets = {
-			{ loc = vec3(453.21, -980.03, 30.68), length = 0.5, width = 3.0, heading = 270.0, minZ = 30.5, maxZ = 32.0, distance = 6 }
-		}
-	},
+	-- PoliceArmoury = {
+	-- 	name = 'Police Armoury',
+	-- 	groups = shared.police,
+	-- 	blip = {
+	-- 		id = 110, colour = 84, scale = 0.8
+	-- 	}, inventory = {
+	-- 		{ name = 'ammo-9', price = 5, },
+	-- 		{ name = 'ammo-rifle', price = 5, },
+	-- 		{ name = 'WEAPON_FLASHLIGHT', price = 200 },
+	-- 		{ name = 'WEAPON_NIGHTSTICK', price = 100 },
+	-- 		{ name = 'WEAPON_PISTOL', price = 500, metadata = { registered = true, serial = 'POL' }, license = 'weapon' },
+	-- 		{ name = 'WEAPON_CARBINERIFLE', price = 1000, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 3 },
+	-- 		{ name = 'WEAPON_STUNGUN', price = 500, metadata = { registered = true, serial = 'POL'} }
+	-- 	}, locations = {
+	-- 		vec3(451.51, -979.44, 30.68)
+	-- 	}, targets = {
+	-- 		{ loc = vec3(453.21, -980.03, 30.68), length = 0.5, width = 3.0, heading = 270.0, minZ = 30.5, maxZ = 32.0, distance = 6 }
+	-- 	}
+	-- },
 
 	Medicine = {
 		name = 'Medicine Cabinet',
@@ -172,11 +172,8 @@ return {
         }	
 	},
 
-	BagShop2 = {
+	LaFitness = {
 		name = 'La Fitness Gym',
-		blip = {
-			id = 311, colour = 69, scale = 0.9
-		}, 
 		inventory = {
 			{ name = 'gym_membership_laf', price = 1000},
 		},
@@ -206,14 +203,14 @@ return {
 			{ name = 'watering_can', price = 100},
 		},
 		locations = {
-			vec3(-1249.4937, -1447.1499, 4.3739)
+			vec3(-1171.2188, -1571.0768, 4.6636)
 		},
 		targets = {
             {
                 ped = `IG_HippyLeader`,
                 scenario = 'WORLD_HUMAN_SMOKING_POT',
-                loc = vec3(-1249.0353, -1449.3384, 3.3739),
-                heading = 35.1344,
+                loc = vec3(-1168.6730, -1572.8740, 3.6636),
+                heading = 128.7452,
 				distance = 2.5
             },
         }	

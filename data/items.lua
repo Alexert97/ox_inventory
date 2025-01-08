@@ -101,6 +101,110 @@ return {
 		stack = true,
 		description = "Pinzette di precisione per rimuovere in sicurezza oggetti estranei, come proiettili, dalle ferite.",
 	},
+
+	['anestesia_1'] = {
+		label = 'Anestesia Di Tipo A',
+		weight = 100,
+		stack = true,
+		description = "Descrizione di Anestesia 1.",
+	},
+	['divaricatore'] = {
+		label = 'Divaricatore',
+		weight = 100,
+		stack = true,
+		description = "Descrizione di Divaricatore.",
+	},
+	['sega_toracica'] = {
+		label = 'Sega toracica',
+		weight = 100,
+		stack = true,
+		description = "Descrizione di Sega toracica.",
+	},
+	['pinza_chirurgica'] = {
+		label = 'Pinza chirurgica',
+		weight = 100,
+		stack = true,
+		description = "Descrizione di Pinza chirurgica.",
+	},
+	['elettrobisturi'] = {
+		label = 'Elettrobisturi',
+		weight = 100,
+		stack = true,
+		description = "Descrizione di Elettrobisturi.",
+	},
+	['pinza_emostatica'] = {
+		label = 'Pinza emostatica',
+		weight = 100,
+		stack = true,
+		description = "Descrizione di Pinza emostatica.",
+	},
+	['stent'] = {
+		label = 'Stent',
+		weight = 100,
+		stack = true,
+		description = "Descrizione di Stent.",
+	},
+	['pasemaker'] = {
+		label = 'Pasemaker',
+		weight = 100,
+		stack = true,
+		description = "Descrizione di Pasemaker.",
+	},
+	['protesi_anca'] = {
+		label = 'Protesi anca',
+		weight = 100,
+		stack = true,
+		description = "Descrizione di Protesi anca.",
+	},
+	['rasoio'] = {
+		label = 'Rasoio',
+		weight = 100,
+		stack = true,
+		description = "Descrizione di Rasoio.",
+	},
+	['kit_sutura_interno'] = {
+		label = 'Kit sutura interno',
+		weight = 100,
+		stack = true,
+		description = "Descrizione di Kit sutura interno.",
+	},
+	['viti'] = {
+		label = 'Viti',
+		weight = 100,
+		stack = true,
+		description = "Descrizione di Viti.",
+	},
+	['placche'] = {
+		label = 'Placche',
+		weight = 100,
+		stack = true,
+		description = "Descrizione di Pacche.",
+	},
+	['antidoto_1'] = {
+		label = 'Antidoto Di tipo A',
+		weight = 100,
+		stack = true,
+		description = "Descrizione di Antidoto 1.",
+	},
+	['disinfettante'] = {
+		label = 'Disinfettante',
+		weight = 100,
+		stack = true,
+		description = "Descrizione di Disinfettante.",
+	},
+	['bende'] = {
+		label = 'Bende',
+		weight = 100,
+		stack = true,
+		description = "Descrizione di Bende.",
+	},
+	['kit_sutura_esterno'] = {
+		label = 'Kit sutura esterno',
+		weight = 100,
+		stack = true,
+		description = "Descrizione di Kit sutura esterno.",
+	},
+
 	
 	['burncream'] = {
 		label = 'Crema per Ustioni',
@@ -6546,4 +6650,7 @@ return {
         stack = false,
         close = true,
     },
+
+
+	
 }
