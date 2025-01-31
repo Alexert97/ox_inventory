@@ -1463,10 +1463,17 @@ RegisterNetEvent('ox_inventory:setPlayerInventory', function(currentDrops, inven
 	local DisableControlAction = DisableControlAction
 	local IsPedShooting = IsPedShooting
 	local IsControlJustReleased = IsControlJustReleased
+	local RemoveAllPickupsOfType = RemoveAllPickupsOfType
+	local SetWeaponDamageModifier = SetWeaponDamageModifier
+	local SetPlayerHealthRechargeMultiplier = SetPlayerHealthRechargeMultiplier
 
 	client.tick = SetInterval(function()
 		DisablePlayerVehicleRewards(playerId)
-
+		RemoveAllPickupsOfType(0xDF711959) -- carbine rifle
+		RemoveAllPickupsOfType(0xF9AFB48F) -- pistol
+		RemoveAllPickupsOfType(0xA9355DCD) -- pumpshotgun
+		SetWeaponDamageModifier(`WEAPON_UNARMED`, 0.000001)
+		SetPlayerHealthRechargeMultiplier(playerId, 0.0)
 		if invOpen then
 			DisableAllControlActions(0)
 			HideHudAndRadarThisFrame()

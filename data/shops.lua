@@ -6,15 +6,12 @@ return {
 		}, inventory = {
 			{ name = 'pizza', price = 80 },
 			{ name = 'acqua', price = 70 },
-			{ name = 'redwoods', price = 5 , metadata = {
-				total = 20,
-			}},
+			{ name = 'redwoods', price = 8 , metadata = {total = 20}},		
 			{ name = 'lighter', price = 5 },
 			{ name = 'grinder', price = 15 },
-			{ name = 'cartinap', price = 7 },
-			{ name = 'screwdriverset', price = 300 },
-			{ name = 'portachiavi', price = 70},
-			{ name = 'portafoglio', price = 160},
+			{ name = 'cartinap', price = 5 },
+			{ name = 'portachiavi', price = 20},
+			{ name = 'portafoglio', price = 32},
 
 
 		}, locations = {
@@ -47,13 +44,17 @@ return {
 		blip = {
 			id = 93, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'birra', price = 220 },
-			{ name = 'artigianale', price = 420 },
-			{ name = 'burger', price = 115 },
-			{ name = 'mtndew', price  = 210},
-			{name = 'gin', price = 300},
-			{name = 'vodkabsolute', price = 400},
-			{name = 'tequila', price = 300},
+			{ name = 'birra', price = 12 },
+			{ name = 'artigianale', price = 8 },
+			{name = 'gin', price = 6 },
+			{name = 'vodkabsolute', price = 18 },
+			{name = 'tequila', price = 6 },
+			{name = 'campari', price = 6 },
+			{name = 'margherita', price = 6 },
+			{name = 'martini', price = 6 },
+			{name = 'spritz', price = 6 },
+			{name = 'spritz', price = 6 },
+
 		}, locations = {
 			vec3(1135.808, -982.281, 46.415),
 			vec3(-1222.915, -906.983, 12.326),
@@ -97,7 +98,7 @@ return {
 		blip = {
 			id = 403, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'bandage', price = 1000 }
+			{ name = 'bandage', price = 15 }
 		}, locations = {
 			vec3(306.3687, -601.5139, 43.28406)
 		}, targets = {
@@ -111,9 +112,11 @@ return {
 			id = 459, colour = 69, scale = 1.2
 		}, 
 		inventory = {
-			{ name = 'black_phone', price = 1000},
-			{ name = 'radio', price = 1000},
-			{ name = 'gopro', price = 1000},
+			{ name = 'black_phone', price = 130},
+			{ name = 'radio', price = 65},
+			{ name = 'gopro', price = 228},
+			{ name = 'boombox', price = 98},
+			{ name = 'micspy', price = 163},
 		},
 		locations = {
 			vec3(-1078.7019, -245.0307, 36.7633)
@@ -127,6 +130,7 @@ return {
             },
         }	
 	},
+	
 
 	BagShop = {
 		name = 'Negozio Borsoni',
@@ -134,7 +138,7 @@ return {
 			id = 676, colour = 69, scale = 0.9
 		}, 
 		inventory = {
-			{ name = 'backpack', price = 1000},
+			{ name = 'backpack', price = 50},
 		},
 		locations = {
 			vec3(123.2033, -212.0968, 54.5577)
@@ -156,7 +160,7 @@ return {
 			id = 676, colour = 69, scale = 0.9
 		}, 
 		inventory = {
-			{ name = 'backpack', price = 1000},
+			{ name = 'backpack', price = 50},
 		},
 		locations = {
 			vec3(-1197.3899, -779.0151, 17.3299)
@@ -176,6 +180,7 @@ return {
 		name = 'La Fitness Gym',
 		inventory = {
 			{ name = 'gym_membership_laf', price = 1000},
+			{ name = 'monster', price = 30},
 		},
 		locations = {
 			vec3(258.4097, -271.4227, 53.9635)
@@ -215,5 +220,35 @@ return {
             },
         }	
 	},
-	 
+
+	IronmongeryShop = {
+		name = 'Fonderia',
+		blip = {
+			id = 402, colour = 69, scale = 0.9
+		},
+		inventory = {
+			{ name = 'screwdriverset', price = 300},
+			{ name = 'aluminum', price = 2},
+			{ name = 'iron', price = 1},
+			{ name = 'copper', price = 5},
+			{ name = 'steel', price = 1},
+			{ name = 'titanium', price = 10},
+			{ name = 'sulfur', price = 1},
+			{ name = 'rubber', price = 2},
+			{ name = 'polyester', price = 1},
+		},
+		--2340.2808, 3126.5830, 48.2087, 329.0194
+		locations = {
+			vec3(1077.8986, -1979.8615, 31.4711)
+		},
+		targets = {
+			{
+				ped = `a_m_m_farmer_01`,
+				scenario = 'WORLD_HUMAN_SMOKING',
+				loc = vec3(1077.8986, -1979.8615, 30.4711),
+				heading = 269.5216,
+				distance = 2.5
+			},
+		}
+	},
 } 

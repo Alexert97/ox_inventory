@@ -104,105 +104,138 @@ return {
 
 	['anestesia_1'] = {
 		label = 'Anestesia Di Tipo A',
-		weight = 100,
+		weight = 500,
 		stack = true,
-		description = "Descrizione di Anestesia 1.",
+		description = "Un tipo di anestesia utilizzata per interventi chirurgici minori.",
 	},
 	['divaricatore'] = {
 		label = 'Divaricatore',
-		weight = 100,
+		weight = 1500,
 		stack = true,
-		description = "Descrizione di Divaricatore.",
+		description = "Strumento chirurgico utilizzato per mantenere aperte le incisioni.",
 	},
 	['sega_toracica'] = {
 		label = 'Sega toracica',
-		weight = 100,
+		weight = 2500,
 		stack = true,
-		description = "Descrizione di Sega toracica.",
+		description = "Strumento utilizzato per tagliare le ossa del torace durante interventi chirurgici.",
 	},
 	['pinza_chirurgica'] = {
 		label = 'Pinza chirurgica',
-		weight = 100,
+		weight = 300,
 		stack = true,
-		description = "Descrizione di Pinza chirurgica.",
+		description = "Strumento utilizzato per afferrare e manipolare i tessuti durante la chirurgia.",
 	},
 	['elettrobisturi'] = {
 		label = 'Elettrobisturi',
-		weight = 100,
+		weight = 2000,
 		stack = true,
-		description = "Descrizione di Elettrobisturi.",
+		description = "Strumento chirurgico che utilizza corrente elettrica per tagliare i tessuti e cauterizzare le ferite.",
+	},
+	['bisturi'] = {
+		label = 'Bisturi',
+		weight = 50,
+		stack = true,
+		description = "Strumento affilato utilizzato per fare incisioni precise nei tessuti.",
 	},
 	['pinza_emostatica'] = {
 		label = 'Pinza emostatica',
-		weight = 100,
+		weight = 300,
 		stack = true,
-		description = "Descrizione di Pinza emostatica.",
+		description = "Strumento utilizzato per fermare il sanguinamento durante gli interventi chirurgici.",
 	},
 	['stent'] = {
 		label = 'Stent',
 		weight = 100,
 		stack = true,
-		description = "Descrizione di Stent.",
+		description = "Dispositivo utilizzato per mantenere aperti i vasi sanguigni.",
 	},
 	['pasemaker'] = {
-		label = 'Pasemaker',
-		weight = 100,
+		label = 'Pacemaker',
+		weight = 200,
 		stack = true,
-		description = "Descrizione di Pasemaker.",
+		description = "Dispositivo impiantabile che regola il battito cardiaco.",
 	},
 	['protesi_anca'] = {
 		label = 'Protesi anca',
-		weight = 100,
+		weight = 3000,
 		stack = true,
-		description = "Descrizione di Protesi anca.",
+		description = "Dispositivo utilizzato per sostituire un'articolazione dell'anca danneggiata.",
 	},
 	['rasoio'] = {
 		label = 'Rasoio',
-		weight = 100,
+		weight = 25,
 		stack = true,
-		description = "Descrizione di Rasoio.",
+		description = "Strumento utilizzato per rimuovere i peli dalla pelle prima di un intervento chirurgico.",
 	},
 	['kit_sutura_interno'] = {
 		label = 'Kit sutura interno',
-		weight = 100,
+		weight = 800,
 		stack = true,
-		description = "Descrizione di Kit sutura interno.",
+		description = "Kit completo per suturare le ferite interne.",
 	},
 	['viti'] = {
 		label = 'Viti',
-		weight = 100,
+		weight = 200,
 		stack = true,
-		description = "Descrizione di Viti.",
+		description = "Viti chirurgiche utilizzate per fissare le ossa durante la guarigione.",
 	},
 	['placche'] = {
 		label = 'Placche',
-		weight = 100,
+		weight = 600,
 		stack = true,
-		description = "Descrizione di Pacche.",
+		description = "Placche metalliche utilizzate per stabilizzare le ossa fratturate.",
 	},
 	['antidoto_1'] = {
 		label = 'Antidoto Di tipo A',
-		weight = 100,
+		weight = 200,
 		stack = true,
-		description = "Descrizione di Antidoto 1.",
+		description = "Antidoto utilizzato per neutralizzare specifici veleni o tossine.",
 	},
 	['disinfettante'] = {
 		label = 'Disinfettante',
-		weight = 100,
+		weight = 1000,
 		stack = true,
-		description = "Descrizione di Disinfettante.",
+		description = "Soluzione utilizzata per disinfettare le ferite e prevenire infezioni.",
 	},
 	['bende'] = {
 		label = 'Bende',
 		weight = 100,
 		stack = true,
-		description = "Descrizione di Bende.",
+		description = "Materiale utilizzato per coprire e proteggere le ferite.",
 	},
 	['kit_sutura_esterno'] = {
 		label = 'Kit sutura esterno',
+		weight = 800,
+		stack = true,
+		description = "Kit completo per suturare le ferite esterne.",
+	},
+	--[[
+                stabilizzatore cervicale
+                stabilizzatore piedi
+                trapano cranico
+            ]]
+
+
+	['stabilizzatore_cervicale'] = {
+		label = 'Stabilizzatore cervicale',
 		weight = 100,
 		stack = true,
-		description = "Descrizione di Kit sutura esterno.",
+		description = "Strumento utilizzato per stabilizzare la colonna vertebrale durante la gestione dei traumi.",
+	},
+
+    ['stabilizzatore_piedi'] = {
+        label = 'Stabilizzatore piedi',
+        weight = 100,
+		stack = true,
+		description = "Strumento utilizzato per stabilizzare i piedi durante la gestione dei traumi.",
+	},
+	
+	['trapano_cranico'] = {
+        label = 'Trapano cranico',
+        weight = 100,
+        stack = true,
+		description = "Strumento utilizzato per praticare un foro nel cranio per la chirurgia cerebrale.",
 	},
 
 	
@@ -1020,6 +1053,35 @@ return {
 			consume = 0,
 			stack = false,
 			close = true,
+			client = {
+				image = 'policebadge.png',
+			},
+			server = {
+				export = "xert_idcard.policebadge"
+			}
+		},
+		['saspbadge'] = {
+			label = 'Badge Polizia',
+			weight = 0.03,
+			consume = 0,
+			stack = false,
+			close = true,
+			client = {
+				image = 'policebadge.png',
+			},
+			server = {
+				export = "xert_idcard.policebadge"
+			}
+		},
+		['bcpdbadge'] = {
+			label = 'Badge Polizia',
+			weight = 0.03,
+			consume = 0,
+			stack = false,
+			close = true,
+			client = {
+				image = 'policebadge.png',
+			},
 			server = {
 				export = "xert_idcard.policebadge"
 			}
@@ -1186,7 +1248,7 @@ return {
 	--------------------------------------------------------------
 	--COUPON
 	--------------------------------------------------------------
-		['coupon1'] = {
+		--[[['coupon1'] = {
 			label = "Coupon 50K Concessionario",
 			weight = 0.00,
 			stack = false,
@@ -1203,7 +1265,7 @@ return {
 			weight = 0.00,
 			stack = false,
 			close = true,
-		},
+		},]]
 		['book'] = {
 			label = "Manuale",
 			weight = 0.00,
@@ -1243,7 +1305,7 @@ return {
 
 		['backpack'] = {
 			label = 'Borsone',
-			weight = 5000,
+			weight = 2000,
 			stack = false,
 			close = true,
 			description = "Chissà  quante belle cose si possono mettere qui dentro..",
@@ -1440,7 +1502,7 @@ return {
 	
 		['micspy'] = {
 			label = 'Microfono spia',
-			weight = 1000,
+			weight = 100,
 			stack = false,
 			allowArmed = true
 		},
@@ -2158,12 +2220,12 @@ return {
 		
 			['acqua'] = {
 				label = 'Acqua 500 ml',
-				weight = 500.0,
+				weight = 520.0,
 				stack = true,
 				close = true,
-				consume = 0.50,
+				consume = 0.1,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 20000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_ld_flow_bottle`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2179,7 +2241,7 @@ return {
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 500000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_ld_flow_bottle`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2190,12 +2252,12 @@ return {
 		
 			['acquafrizz'] = {
 				label = 'Acqua Frizzante 500 ml',
-				weight = 500,
+				weight = 520,
 				stack = true,
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_ld_flow_bottle`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2211,7 +2273,7 @@ return {
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 500000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_ld_flow_bottle`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2222,7 +2284,7 @@ return {
 		
 			['limonata'] = {
 				label = 'Limonata',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
@@ -2238,12 +2300,12 @@ return {
 		
 			['succoananas'] = {
 				label = 'Succo Ananas',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 300000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2254,12 +2316,12 @@ return {
 		
 			['succodiarancia'] = {
 				label = 'Succo Arancia',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 300000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2270,12 +2332,12 @@ return {
 		
 			['succomela'] = {
 				label = 'Succo di Mela',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 300000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2286,12 +2348,12 @@ return {
 		
 			['telimone'] = {
 				label = 'The Limone',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 400000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2302,12 +2364,12 @@ return {
 		
 			['tepesca'] = {
 				label = 'The Pesca',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 400000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2318,12 +2380,12 @@ return {
 		
 			['tetropicale'] = {
 				label = 'The Tropicale',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 400000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2336,12 +2398,13 @@ return {
 		
 			['cocacola'] = {
 				label = 'Coca Cola',
-				weight = 1,
+				weight = 350,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 400000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2352,10 +2415,11 @@ return {
 		
 			['cocacolalight'] = {
 				label = 'Coca Cola Light',
-				weight = 1,
+				weight = 350,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
 					status = { thirst = 400000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -2368,12 +2432,13 @@ return {
 		
 			['cocacolazero'] = {
 				label = 'Coca Cola Zero',
-				weight = 1,
+				weight = 350,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 300000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2384,12 +2449,13 @@ return {
 		
 			['estate'] = {
 				label = 'Estate',
-				weight = 1,
+				weight = 350,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 500000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2400,12 +2466,13 @@ return {
 		
 			['fanta'] = {
 				label = 'Fanta',
-				weight = 1,
+				weight = 350,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 300000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2416,12 +2483,13 @@ return {
 		
 			['fantaananas'] = {
 				label = 'Fanta Ananas',
-				weight = 1,
+				weight = 350,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 400000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2432,12 +2500,13 @@ return {
 		
 			['fantaexotic'] = {
 				label = 'Fanta Exotic',
-				weight = 1,
+				weight = 350,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2448,12 +2517,13 @@ return {
 		
 			['fantafragola'] = {
 				label = 'Fanta Fragola',
-				weight = 1,
+				weight = 350,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2464,12 +2534,13 @@ return {
 		
 			['fantalime'] = {
 				label = 'Fanta Lime',
-				weight = 1,
+				weight = 350,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2480,12 +2551,13 @@ return {
 		
 			['lemonsoda'] = {
 				label = 'lemon soda',
-				weight = 1,
+				weight = 350,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2496,12 +2568,13 @@ return {
 		
 			['limonatasoda'] = {
 				label = 'limonata ',
-				weight = 1,
+				weight = 350,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 300000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2512,12 +2585,13 @@ return {
 		
 			['mojitosoda'] = {
 				label = 'Mojito Soda',
-				weight = 1,
+				weight = 350,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 600000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2528,12 +2602,13 @@ return {
 			
 			['pepsi'] = {
 				label = 'Pepsi',
-				weight = 1,
+				weight = 350,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 300000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2544,12 +2619,13 @@ return {
 		
 			['pepsitwist'] = {
 				label = 'Pepsi Twist',
-				weight = 1,
+				weight = 350,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2560,10 +2636,11 @@ return {
 			
 			['sampellegrinolimone'] = {
 				label = 'Sampellegrino Limone',
-				weight = 1,
+				weight = 350,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
 					status = { thirst = 400000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -2576,10 +2653,11 @@ return {
 		
 			['sampellegrinoorange'] = {
 				label = 'Sampellegrino Orange',
-				weight = 1,
+				weight = 350,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
 					status = { thirst = 400000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -2592,12 +2670,13 @@ return {
 		
 			['sampellegrinopompelmo'] = {
 				label = 'Sampellegrino Pompelmo',
-				weight = 1,
+				weight = 350,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 400000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2609,10 +2688,11 @@ return {
 			
 			['schweppesga'] = {
 				label = 'Ginger Ale',
-				weight = 1,
+				weight = 350,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
 					status = { thirst = 400000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -2625,12 +2705,13 @@ return {
 		
 			['schweppesws'] = {
 				label = 'Schweppes Water',
-				weight = 1,
+				weight = 350,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 300000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2641,12 +2722,13 @@ return {
 		
 			['sprite'] = {
 				label = 'Sprite',
-				weight = 1,
+				weight = 350,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `ng_proc_sodacan_01b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2659,12 +2741,13 @@ return {
 		
 			['gatorade'] = {
 				label = 'Gatorade',
-				weight = 1,
+				weight = 270,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 500000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2675,12 +2758,13 @@ return {
 		
 			['monster'] = {
 				label = 'monster energy',
-				weight = 1,
+				weight = 270,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 500000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2691,12 +2775,13 @@ return {
 		
 			['mtndew'] = {
 				label = 'Mountam Dew',
-				weight = 1,
+				weight = 270,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 500000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2707,12 +2792,13 @@ return {
 		
 			['powerade'] = {
 				label = 'Powerade',
-				weight = 1,
+				weight = 270,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 500000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2723,12 +2809,13 @@ return {
 		
 			['redbull'] = {
 				label = 'RedBull',
-				weight = 1,
+				weight = 270,
 				stack = true,
 				close = true,
-				consume = 0.50,
+				consume = 0.20,
+				degrade= 10080,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 500000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2739,12 +2826,13 @@ return {
 		
 			['rockstarenergy'] = {
 				label = 'Rockstar Energy',
-				weight = 1,
+				weight = 270,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 10080,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 500000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2757,12 +2845,13 @@ return {
 		
 			['americano'] = {
 				label = 'Americano',
-				weight = 1,
+				weight = 100,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `v_club_vu_coffeecup`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2773,12 +2862,13 @@ return {
 		
 			['brasilena'] = {
 				label = 'Brasilena',
-				weight = 1,
+				weight = 100,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `v_club_vu_coffeecup`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2789,12 +2879,13 @@ return {
 		
 			['cappuccino'] = {
 				label = 'Cappuccino',
-				weight = 1,
+				weight = 100,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `v_club_vu_coffeecup`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2805,12 +2896,13 @@ return {
 		
 			['espresso'] = {
 				label = 'Caffe Espresso',
-				weight = 1,
+				weight = 100,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `v_club_vu_coffeecup`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2821,12 +2913,13 @@ return {
 		
 			['frappuccino'] = {
 				label = 'Frappuccino',
-				weight = 1,
+				weight = 100,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `v_club_vu_coffeecup`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2837,12 +2930,13 @@ return {
 		
 			['theverde'] = {
 				label = 'The Verde',
-				weight = 1,
+				weight = 100,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2855,12 +2949,13 @@ return {
 		
 			['angostura'] = {
 				label = 'Angostura',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2871,12 +2966,13 @@ return {
 		
 			['assenzio'] = {
 				label = 'Assenzio',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2887,12 +2983,13 @@ return {
 		
 			['bellini'] = {
 				label = 'Bellini',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2903,12 +3000,13 @@ return {
 		
 			['bloodymary'] = {
 				label = 'Bloody Mary',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2919,12 +3017,13 @@ return {
 		
 			['blucur'] = {
 				label = 'Blu Cur',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2935,12 +3034,13 @@ return {
 		
 			['bluocean'] = {
 				label = 'Blu Ocean',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2951,12 +3051,13 @@ return {
 		
 			['campari'] = {
 				label = 'Campari',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2967,12 +3068,13 @@ return {
 		
 			['capiroska'] = {
 				label = 'Capiroska',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2983,12 +3085,13 @@ return {
 		
 			['cosmopolitan'] = {
 				label = 'Cosmopolitan',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -2999,12 +3102,13 @@ return {
 		
 			['gintonic'] = {
 				label = 'Gin Tonic',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3015,12 +3119,13 @@ return {
 		
 			['invisible'] = {
 				label = 'Invisible',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3031,12 +3136,13 @@ return {
 		
 			['margherita'] = {
 				label = 'Margherita',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3047,12 +3153,13 @@ return {
 		
 			['martini'] = {
 				label = 'Martini',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3063,12 +3170,13 @@ return {
 		
 			['mojito'] = {
 				label = 'Mojito',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3079,12 +3187,13 @@ return {
 		
 			['rumcola'] = {
 				label = 'Rum Cola',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3095,12 +3204,13 @@ return {
 		
 			['rumponch'] = {
 				label = 'Rum Ponch',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3111,12 +3221,13 @@ return {
 		
 			['sangriadelsidro'] = {
 				label = 'Sangria del Sidro',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3127,12 +3238,13 @@ return {
 		
 			['spritz'] = {
 				label = 'Spritz',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3143,12 +3255,13 @@ return {
 		
 			['stregalemon'] = {
 				label = 'Strega lemon',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3159,12 +3272,13 @@ return {
 		
 			['violakir'] = {
 				label = 'Viola Kir',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3175,12 +3289,13 @@ return {
 		
 			['violet'] = {
 				label = 'Violet',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3192,12 +3307,13 @@ return {
 			
 			['vodkaarancia'] = {
 				label = 'Vodka Arancia',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3208,12 +3324,13 @@ return {
 		
 			['vodkafragola'] = {
 				label = 'Vodka Fragola',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3224,12 +3341,13 @@ return {
 			
 			['vodkalemon'] = {
 				label = 'Vodka Lemon',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3240,12 +3358,13 @@ return {
 		
 			['vodkalime'] = {
 				label = 'Vodka lime',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3256,12 +3375,13 @@ return {
 		
 			['whitemint'] = {
 				label = 'White Mint',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 1440,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3274,10 +3394,11 @@ return {
 		
 			['bianco'] = {
 				label = 'Vino Bianco',
-				weight = 1,
+				weight = 750,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 4320,
 				client = {
 					status = { thirst = 400000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -3290,10 +3411,11 @@ return {
 		
 			['rose'] = {
 				label = 'Vino Rose',
-				weight = 1,
+				weight = 750,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 4320,
 				client = {
 					status = { thirst = 400000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -3306,10 +3428,11 @@ return {
 		
 			['rosso'] = {
 				label = 'Vino Rosso',
-				weight = 1,
+				weight = 750,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 4320,
 				client = {
 					status = { thirst = 400000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -3322,12 +3445,13 @@ return {
 		
 			['glassbianco'] = {
 				label = 'Bicchiere Bianco',
-				weight = 1,
+				weight = 250,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 4320,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3338,12 +3462,13 @@ return {
 		
 			['glassrose'] = {
 				label = 'Bicchiere Rose',
-				weight = 1,
+				weight = 250,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 4320,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3354,12 +3479,13 @@ return {
 		
 			['glassrosso'] = {
 				label = 'Bicchiere Rosso',
-				weight = 1,
+				weight = 250,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 4320,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `vw_prop_casino_wine_glass_01a`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3372,12 +3498,13 @@ return {
 		
 			['artigianale'] = {
 				label = 'Birra Artigianale',
-				weight = 1,
+				weight = 600,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3388,12 +3515,13 @@ return {
 		
 			['becks'] = {
 				label = 'Becks',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3404,12 +3532,13 @@ return {
 		
 			['birra'] = {
 				label = 'Birra',
-				weight = 1,
+				weight = 600,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3420,12 +3549,13 @@ return {
 		
 			['budlight'] = {
 				label = 'Bud Light',
-				weight = 1,
+				weight = 600,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3436,12 +3566,13 @@ return {
 		
 			['budweiser'] = {
 				label = 'Budweiser',
-				weight = 1,
+				weight = 600,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3452,12 +3583,13 @@ return {
 		
 			['coronalimone'] = {
 				label = 'Corona lime',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3468,12 +3600,13 @@ return {
 		
 			['franziskaner'] = {
 				label = 'Franziskaner',
-				weight = 1,
+				weight = 600,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3484,12 +3617,13 @@ return {
 		
 			['guinness'] = {
 				label = 'Guinness Black',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3500,12 +3634,13 @@ return {
 		
 			['heineken'] = {
 				label = 'Heineken',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3516,12 +3651,13 @@ return {
 		
 			['ichnusa'] = {
 				label = 'Ichnusa',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3532,12 +3668,13 @@ return {
 		
 			['moretti'] = {
 				label = 'Moretti',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3548,12 +3685,13 @@ return {
 		
 			['morettiipa'] = {
 				label = 'Moretti Ipa',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3564,12 +3702,13 @@ return {
 		
 			['nastro'] = {
 				label = 'Nastro Azzurro',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3580,12 +3719,13 @@ return {
 		
 			['peroni'] = {
 				label = 'Peroni',
-				weight = 1,
+				weight = 600,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3596,12 +3736,13 @@ return {
 		
 			['tuborg'] = {
 				label = 'Tuborg',
-				weight = 1,
+				weight = 300,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3614,12 +3755,13 @@ return {
 		
 			['moodwine'] = {
 				label = 'Mood Wine',
-				weight = 1,
+				weight = 750,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3630,12 +3772,13 @@ return {
 		
 			['champagne'] = {
 				label = 'Champagne',
-				weight = 1,
+				weight = 750,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3646,12 +3789,13 @@ return {
 		
 			['champagnemoet'] = {
 				label = 'Champagne Moet',
-				weight = 1,
+				weight = 750,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3662,10 +3806,11 @@ return {
 		
 			['biccchierechampagne'] = {
 				label = 'Calice di Champagne',
-				weight = 1,
+				weight = 750,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
 					status = { thirst = 400000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -3678,12 +3823,13 @@ return {
 		
 			['champagnechemet'] = {
 				label = 'Champagne Chemet',
-				weight = 1,
+				weight = 750,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3694,10 +3840,11 @@ return {
 		
 			['champagnechandon'] = {
 				label = 'Champagne Chartogne',
-				weight = 1,
+				weight = 750,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
 					status = { thirst = 400000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -3710,12 +3857,13 @@ return {
 		
 			['champagneblea'] = {
 				label = 'Champagne Blea',
-				weight = 1,
+				weight = 750,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3726,10 +3874,11 @@ return {
 		
 			['champagncanard'] = {
 				label = 'Champagne Canard',
-				weight = 1,
+				weight = 750,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
 					status = { thirst = 400000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -3742,10 +3891,11 @@ return {
 		
 			['champagndompe'] = {
 				label = 'Champagne Dompe',
-				weight = 1,
+				weight = 750,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade= 2880,
 				client = {
 					status = { thirst = 400000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -3758,12 +3908,13 @@ return {
 		
 			['champagnarmand'] = {
 				label = 'Champagne rmand',
-				weight = 1,
+				weight = 750,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3776,12 +3927,12 @@ return {
 		
 			['gin'] = {
 				label = 'Gin',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3792,12 +3943,12 @@ return {
 		
 			['gintonica'] = {
 				label = 'Gitonica',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3808,12 +3959,12 @@ return {
 		
 			['bluegin'] = {
 				label = 'Bluegin',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3824,12 +3975,12 @@ return {
 		
 			['whiskeyabsolute'] = {
 				label = 'Whiskeyabsolute',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3840,12 +3991,12 @@ return {
 		
 			['vodkabsolute'] = {
 				label = 'Vodkabsolute',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3856,12 +4007,12 @@ return {
 		
 			['vodkapesca'] = {
 				label = 'Vodka Pesca',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3872,12 +4023,12 @@ return {
 		
 			['vodkalimone'] = {
 				label = 'Vodka limone',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3888,12 +4039,12 @@ return {
 		
 			['vodkalampo'] = {
 				label = 'Vodka Lampo',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3904,12 +4055,12 @@ return {
 		
 			['vodkapassion'] = {
 				label = 'Vodka Passion',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3920,12 +4071,12 @@ return {
 		
 			['vodkamela'] = {
 				label = 'Vodkamela',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3936,12 +4087,12 @@ return {
 		
 			['martinibot'] = {
 				label = 'Martini',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3952,12 +4103,12 @@ return {
 		
 			['bacardibianco'] = {
 				label = 'Bacardi Bianco',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3968,12 +4119,12 @@ return {
 		
 			['bacardilampo'] = {
 				label = 'Cacardi Lampo',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -3984,12 +4135,12 @@ return {
 		
 			['aperol'] = {
 				label = 'Aperol',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4000,12 +4151,12 @@ return {
 		
 			['tequila'] = {
 				label = 'Tequila',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4016,12 +4167,12 @@ return {
 		
 			['assenziobot'] = {
 				label = 'Bottiglia Assenzio',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
 				client = {
-					status = { thirst = 400000 },
+					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4032,170 +4183,192 @@ return {
 		
 		-- LIQUORI
 	
-		['redgin'] = {
-			label = 'Redgin',
-			weight = 1,
-			stack = true,
-			close = true,
-			client = {
-				status = { thirst = 400000 },
-				anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-				prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-				usetime = 2500,
-				notification = 'Ti stai Dissetando '
+			['redgin'] = {
+				label = 'Redgin',
+				weight = 250,
+				stack = true,
+				close = true,
+				consume= 0.50,
+				degrade= 2880,
+				client = {
+					status = { thirst = 400000 },
+					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+					usetime = 2500,
+					notification = 'Ti stai Dissetando '
+				},
+				description = 'Bevanda'
 			},
-			description = 'Bevanda'
-		},
-	
-		['scotchchivas'] = {
-			label = 'Scotch Chivas',
-			weight = 1,
-			stack = true,
-			close = true,
-			client = {
-				status = { thirst = 400000 },
-				anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-				prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-				usetime = 2500,
-				notification = 'Ti stai Dissetando '
+		
+			['scotchchivas'] = {
+				label = 'Scotch Chivas',
+				weight = 250,
+				stack = true,
+				close = true,
+				consume= 0.50,
+				degrade= 2880,
+				client = {
+					status = { thirst = 100000, stamina= -(math.random() / 15)  },
+					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+					usetime = 2500,
+					notification = 'Ti stai Dissetando '
+				},
+				description = 'Bevanda'
 			},
-			description = 'Bevanda'
-		},
-	
-		['scotchchivasreserve'] = {
-			label = 'Scotch Chivas Reserve',
-			weight = 1,
-			stack = true,
-			close = true,
-			client = {
-				status = { thirst = 400000 },
-				anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-				prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-				usetime = 2500,
-				notification = 'Ti stai Dissetando '
+		
+			['scotchchivasreserve'] = {
+				label = 'Scotch Chivas Reserve',
+				weight = 250,
+				stack = true,
+				close = true,
+				consume= 0.50,
+				degrade= 2880,
+				client = {
+					status = { thirst = 400000, stamina= -(math.random() / 15)  },
+					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+					usetime = 2500,
+					notification = 'Ti stai Dissetando '
+				},
+				description = 'Bevanda'
 			},
-			description = 'Bevanda'
-		},
-	
-		['whiskeycrown'] = {
-			label = 'Whiskey Crown',
-			weight = 1,
-			stack = true,
-			close = true,
-			client = {
-				status = { thirst = 400000 },
-				anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-				prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-				usetime = 2500,
-				notification = 'Ti stai Dissetando '
+		
+			['whiskeycrown'] = {
+				label = 'Whiskey Crown',
+				weight = 250,
+				stack = true,
+				close = true,
+				consume= 0.50,
+				degrade= 2880,
+				client = {
+					status = { thirst = 100000 },
+					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+					usetime = 2500,
+					notification = 'Ti stai Dissetando '
+				},
+				description = 'Bevanda'
 			},
-			description = 'Bevanda'
-		},
-	
-		['disaronno'] = {
-			label = 'Disaronno',
-			weight = 1,
-			stack = true,
-			close = true,
-			client = {
-				status = { thirst = 400000 },
-				anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-				prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-				usetime = 2500,
-				notification = 'Ti stai Dissetando '
+		
+			['disaronno'] = {
+				label = 'Disaronno',
+				weight = 250,
+				stack = true,
+				close = true,
+				consume= 0.50,
+				degrade= 2880,
+				client = {
+					status = { thirst = 400000, stamina= -(math.random() / 15)  },
+					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+					usetime = 2500,
+					notification = 'Ti stai Dissetando '
+				},
+				description = 'Bevanda'
 			},
-			description = 'Bevanda'
-		},
-	
-		['jackdaniel'] = {
-			label = 'Jackdaniel',
-			weight = 1,
-			stack = true,
-			close = true,
-			client = {
-				status = { thirst = 400000 },
-				anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-				prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-				usetime = 2500,
-				notification = 'Ti stai Dissetando '
+		
+			['jackdaniel'] = {
+				label = 'Jackdaniel',
+				weight = 250,
+				stack = true,
+				close = true,
+				consume= 0.50,
+				degrade= 2880,
+				client = {
+					status = { thirst = 100000, stamina= -(math.random() / 15)  },
+					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+					usetime = 2500,
+					notification = 'Ti stai Dissetando '
+				},
+				description = 'Bevanda'
 			},
-			description = 'Bevanda'
-		},
-	
-		['fernet'] = {
-			label = 'Fernet',
-			weight = 1,
-			stack = true,
-			close = true,
-			client = {
-				status = { thirst = 400000 },
-				anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-				prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-				usetime = 2500,
-				notification = 'Ti stai Dissetando '
+		
+			['fernet'] = {
+				label = 'Fernet',
+				weight = 250,
+				stack = true,
+				close = true,
+				consume= 0.50,
+				degrade= 2880,
+				client = {
+					status = { thirst = 400000, stamina= -(math.random() / 15)  },
+					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+					usetime = 2500,
+					notification = 'Ti stai Dissetando '
+				},
+				description = 'Bevanda'
 			},
-			description = 'Bevanda'
-		},
-	
-		['fernetriserva'] = {
-			label = 'Fernet Riserva',
-			weight = 1,
-			stack = true,
-			close = true,
-			client = {
-				status = { thirst = 400000 },
-				anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-				prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-				usetime = 2500,
-				notification = 'Ti stai Dissetando '
+		
+			['fernetriserva'] = {
+				label = 'Fernet Riserva',
+				weight = 250,
+				stack = true,
+				close = true,
+				consume= 0.50,
+				degrade= 2880,
+				client = {
+					status = { thirst = 100000 },
+					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+					usetime = 2500,
+					notification = 'Ti stai Dissetando '
+				},
+				description = 'Bevanda'
 			},
-			description = 'Bevanda'
-		},
-	
-		['jeger'] = {
-			label = 'Jeger',
-			weight = 1,
-			stack = true,
-			close = true,
-			client = {
-				status = { thirst = 400000 },
-				anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-				prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-				usetime = 2500,
-				notification = 'Ti stai Dissetando '
+		
+			['jeger'] = {
+				label = 'Jeger',
+				weight = 250,
+				stack = true,
+				close = true,
+				consume= 0.50,
+				degrade= 2880,
+				client = {
+					status = { thirst = 400000 },
+					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+					usetime = 2500,
+					notification = 'Ti stai Dissetando '
+				},
+				description = 'Bevanda'
 			},
-			description = 'Bevanda'
-		},
-	
-		['cointreau'] = {
-			label = 'Cointreau',
-			weight = 1,
-			stack = true,
-			close = true,
-			client = {
-				status = { thirst = 400000 },
-				anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-				prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-				usetime = 2500,
-				notification = 'Ti stai Dissetando '
+		
+			['cointreau'] = {
+				label = 'Cointreau',
+				weight = 250,
+				stack = true,
+				close = true,
+				consume= 0.50,
+				degrade= 2880,
+				client = {
+					status = { thirst = 100000, stamina= -(math.random() / 15)  },
+					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+					usetime = 2500,
+					notification = 'Ti stai Dissetando '
+				},
+				description = 'Bevanda'
 			},
-			description = 'Bevanda'
-		},
-	
-		['baileys'] = {
-			label = 'Baileys',
-			weight = 1,
-			stack = true,
-			close = true,
-			client = {
-				status = { thirst = 400000 },
-				anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-				prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-				usetime = 2500,
-				notification = 'Ti stai Dissetando '
+		
+			['baileys'] = {
+				label = 'Baileys',
+				weight = 250,
+				stack = true,
+				close = true,
+				consume= 0.50,
+				degrade= 2880,
+				client = {
+					status = { thirst = 100000 },
+					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+					prop = { model = `prop_cs_beer_bot_40oz`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
+					usetime = 2500,
+					notification = 'Ti stai Dissetando '
+				},
+				description = 'Bevanda'
 			},
-			description = 'Bevanda'
-		},
 		
 	--------------------------------------------------------------
 	--CIBO
@@ -4204,28 +4377,30 @@ return {
 		
 			['hotdog'] = {
 				label = 'Hotdog',
-				weight = 1,
+				weight = 70,
 				stack = true,
 				close = true,
+				degrade = 2880,
 				consume = 0.50,
-				client = {
-					status = { hunger = 400000 },
+				client = { 
+					status = { hunger = 400000, stamina= -(math.random() / 15) },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_burger_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
-					notification = 'Ti stai Riempiendo '
+					notification = 'Ti stai Riempiendo ',
 				},
 				description = 'Alimento'
 			},
 		
 			['toast'] = {
 				label = 'Toast',
-				weight = 1,
+				weight = 80,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 2880,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_burger_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4236,12 +4411,13 @@ return {
 		
 			['sandwich'] = {
 				label = 'Sandwich',
-				weight = 1,
+				weight = 100,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 2880,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 300000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_burger_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4252,12 +4428,13 @@ return {
 		
 			['pane'] = {
 				label = 'Pane',
-				weight = 1,
+				weight = 100,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 2880,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_burger_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4268,12 +4445,13 @@ return {
 		
 			['piadina'] = {
 				label = 'Piadina',
-				weight = 1,
+				weight = 120,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_burger_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4284,12 +4462,13 @@ return {
 		
 			['paninokebab'] = {
 				label = 'Pita kebab',
-				weight = 1,
+				weight = 150,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 600000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_burger_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4300,12 +4479,13 @@ return {
 		
 			['hamburger'] = {
 				label = 'Hamburger',
-				weight = 1,
+				weight = 130,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 600000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_burger_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4318,12 +4498,13 @@ return {
 		
 			['involtiniprimavera'] = {
 				label = 'Involtini primavera',
-				weight = 1,
+				weight = 80,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `v_res_fa_potnoodle`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4334,12 +4515,13 @@ return {
 		
 			['insalatadipollo'] = {
 				label = 'Insalata con pollo',
-				weight = 1,
+				weight = 80,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `v_res_fa_potnoodle`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4350,12 +4532,13 @@ return {
 		
 			['insalatacaprese'] = {
 				label = 'Insalata alla Caprese',
-				weight = 1,
+				weight = 80,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `v_res_fa_potnoodle`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4366,12 +4549,13 @@ return {
 		
 			['insalatacipolla'] = {
 				label = 'Insalata con cipolla',
-				weight = 1,
+				weight = 80,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `v_res_fa_potnoodle`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4382,12 +4566,13 @@ return {
 		
 			['insalataclassica'] = {
 				label = 'Insalata',
-				weight = 1,
+				weight = 80,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `v_res_fa_potnoodle`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4398,12 +4583,13 @@ return {
 		
 			['insalataradicchio'] = {
 				label = 'Insalata di radicchio',
-				weight = 1,
+				weight = 80,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `v_ret_fh_noodle`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4414,12 +4600,13 @@ return {
 		
 			['tagliereformaggi'] = {
 				label = 'Formaggio al tagliere',
-				weight = 1,
+				weight = 100,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `v_ret_fh_noodle`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4430,12 +4617,13 @@ return {
 		
 			['taglieresalumi'] = {
 				label = 'Salumi al tagliere',
-				weight = 1,
+				weight = 110,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 300000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `v_ret_fh_noodle`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4446,12 +4634,13 @@ return {
 		
 			['wurstelpatatine'] = {
 				label = 'Wurstel con patatine',
-				weight = 1,
+				weight = 250,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 700000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `v_ret_fh_noodle`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4464,10 +4653,11 @@ return {
 		
 			['ramen'] = {
 				label = 'Ramen',
-				weight = 1,
+				weight = 180,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
 					status = { hunger = 400000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -4480,10 +4670,11 @@ return {
 		
 			['zuppacarne'] = {
 				label = 'Zuppa di carne',
-				weight = 1,
+				weight = 180,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
 					status = { hunger = 400000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -4496,10 +4687,11 @@ return {
 		
 			['zuppacarote'] = {
 				label = 'Zuppa di carote',
-				weight = 1,
+				weight = 180,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
 					status = { hunger = 400000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -4512,10 +4704,11 @@ return {
 		
 			['zuppapomo'] = {
 				label = 'Zuppa Di Pomodoro',
-				weight = 1,
+				weight = 180,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
 					status = { hunger = 400000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -4528,10 +4721,11 @@ return {
 		
 			['zuppaporri'] = {
 				label = 'Zuppa di porro',
-				weight = 1,
+				weight = 180,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
 					status = { hunger = 400000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -4546,12 +4740,13 @@ return {
 		
 			['coscedipollo'] = {
 				label = 'Coscia di pollo',
-				weight = 1,
+				weight = 150,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 2880,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 300000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `v_ret_fh_noodle`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4562,12 +4757,13 @@ return {
 		
 			['nuggets'] = {
 				label = 'Crocchette di pollo',
-				weight = 1,
+				weight = 200,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 300000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `v_ret_fh_noodle`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4578,12 +4774,13 @@ return {
 		
 			['polloarrosto'] = {
 				label = 'Pollo Arrosto',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 700000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4596,12 +4793,13 @@ return {
 		
 			['lasagne'] = {
 				label = 'Lasagne alla bolognese',
-				weight = 1,
+				weight = 250,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 2880,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 800000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4612,12 +4810,13 @@ return {
 		
 			['pasta'] = {
 				label = 'Pasta',
-				weight = 1,
+				weight = 500,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 2880,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 500000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4628,12 +4827,13 @@ return {
 		
 			['pizza'] = {
 				label = 'Pizza',
-				weight = 1,
+				weight = 160,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 2880,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 500000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4644,12 +4844,13 @@ return {
 		
 			['tranciopizza'] = {
 				label = 'Fetta di pizza',
-				weight = 1,
+				weight = 80,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 2880,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_cs_plate_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4662,12 +4863,13 @@ return {
 		
 			['gamberi'] = {
 				label = 'Gamberi',
-				weight = 1,
+				weight = 90,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 2880,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_plate_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4678,12 +4880,13 @@ return {
 		
 			['sushi'] = {
 				label = 'Sushi',
-				weight = 1,
+				weight = 100,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 2880,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 300000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_plate_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4694,12 +4897,13 @@ return {
 		
 			['tempura'] = {
 				label = 'Tempura',
-				weight = 1,
+				weight = 70,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 2880,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 300000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_plate_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4712,12 +4916,13 @@ return {
 		
 			['bistecca'] = {
 				label = 'Bistecca',
-				weight = 1,
+				weight = 100,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 2880,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 800000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_plate_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4728,12 +4933,13 @@ return {
 		
 			['piattokebab'] = {
 				label = 'Doner kebab',
-				weight = 1,
+				weight = 90,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 2880,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 800000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_plate_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4744,12 +4950,13 @@ return {
 		
 			['spiedini'] = {
 				label = 'Spiedini',
-				weight = 1,
+				weight = 80,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 2880,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_plate_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4762,12 +4969,13 @@ return {
 		
 			['aragosta'] = {
 				label = 'Aragosta',
-				weight = 1,
+				weight = 260,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 600000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_plate_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4778,12 +4986,13 @@ return {
 		
 			['caviale'] = {
 				label = 'Caviale',
-				weight = 1,
+				weight = 190,
 				stack = true,
 				close = true,
+				degrade = 1440,
 				consume = 0.50,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 500000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_plate_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4794,12 +5003,13 @@ return {
 		
 			['goldpizza'] = {
 				label = 'Pizza Dorata',
-				weight = 1,
+				weight = 250,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 800000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_plate_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4810,12 +5020,13 @@ return {
 		
 			['goldsteak'] = {
 				label = 'Bistecca Dorata',
-				weight = 1,
+				weight = 250,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 900000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_plate_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4826,12 +5037,13 @@ return {
 		
 			['kobe'] = {
 				label = 'Manzo di Kobe',
-				weight = 1,
+				weight = 200,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 1000000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_plate_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4842,12 +5054,13 @@ return {
 		
 			['ramenvip'] = {
 				label = 'Ramen vip',
-				weight = 1,
+				weight = 180,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 800000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_plate_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4858,12 +5071,13 @@ return {
 		
 			['sushivip'] = {
 				label = 'Sushi vip',
-				weight = 1,
+				weight = 250,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 600000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_plate_02`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4875,12 +5089,13 @@ return {
 		
 			['ciambella'] = {
 				label = 'Ciambella',
-				weight = 1,
+				weight = 10,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 100000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_donut_02b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4891,12 +5106,13 @@ return {
 		
 			['cornetto'] = {
 				label = 'Cornetto',
-				weight = 1,
+				weight = 10,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_donut_02b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4907,12 +5123,13 @@ return {
 		
 			['muffin'] = {
 				label = 'Muffin',
-				weight = 1,
+				weight = 100,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 100000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_donut_02b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4923,12 +5140,13 @@ return {
 		
 			['frutta'] = {
 				label = 'Frutta',
-				weight = 1,
+				weight = 100,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_donut_02b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4939,12 +5157,13 @@ return {
 		
 			['gelato'] = {
 				label = 'Gelato',
-				weight = 1,
+				weight = 150,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 100000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_donut_02b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4955,12 +5174,13 @@ return {
 		
 			['briochegelato'] = {
 				label = 'Brioche Gelato',
-				weight = 1,
+				weight = 150,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 200000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_donut_02b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4973,12 +5193,13 @@ return {
 		
 			['patatinefritte'] = {
 				label = 'Patatine Fritte',
-				weight = 1,
+				weight = 100,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 300000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_donut_02b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -4989,12 +5210,13 @@ return {
 		
 			['piugusto'] = {
 				label = 'Più Gusto',
-				weight = 1,
+				weight = 100,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 300000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_donut_02b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -5005,12 +5227,13 @@ return {
 		
 			['noccioline'] = {
 				label = 'Noccioline',
-				weight = 1,
+				weight = 100,
 				stack = true,
 				close = true,
 				consume = 0.50,
+				degrade = 1440,
 				client = {
-					status = { hunger = 400000 },
+					status = { hunger = 300000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 					prop = { model = `prop_donut_02b`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 					usetime = 2500,
@@ -5097,23 +5320,32 @@ return {
 		description = "\"An item\""
 	},
 
-	["spray"] = {
-		label = "Spray",
-		weight = 1,
-		stack = true,
-		close = true,
-		description = "\"An item\"",
-		server = {
-			export = 'rcore_spray.spray'
+	['spraycan'] = {
+		label = 'Spray Can',
+		weight = 160,
+		stack=false,
+		description="Get up to no good!",
+		client={
+			
+		},
+		server={
+			export="jack-graffiti.spraycan"
 		}
 	},
-
-	["spray_remover"] = {
-		label = "Spray Remover",
-		weight = 1,
+	["cleaningkit"] = {
+		label = "Cleaning Kit",
+		weight = 250,
 		stack = true,
 		close = true,
-		description = "\"An item\""
+		description = "A microfiber cloth with some soap will let your car sparkle again!",
+		durability = 100,
+		decay = true,
+		client = {
+			image = "cleaningkit.png",
+		},
+		server={
+			export="jack-graffiti.cleaningkit"
+		}
 	},
 
 	["stancerkit"] = {
@@ -5174,6 +5406,18 @@ return {
 
 	['turboracing'] = {
 		label = 'Turbo Racing',
+		weight = 250,
+		stack = true,
+		close = true,
+		client = {
+			anim = { dict = 'mini@repair', clip = 'fixing_a_player' },
+			usetime = 5500,
+			export = 'xert_tuners.useItem'
+		}
+	},
+
+	['turboultimate'] = {
+		label = 'Turbo Ultimate',
 		weight = 250,
 		stack = true,
 		close = true,
@@ -6536,77 +6780,76 @@ return {
 	},
 
 	['rubber'] = {
-		label = 'Rubber',
-		weight = 20,
+		label = 'Gomma',
+		weight = 100,
 		stack = true,
 		close = true,
 		description = nil,
 	},
 	['sulfur'] = {
-		label = 'Sulfur',
-		weight = 20,
+		label = 'Zolfo',
+		weight = 100,
 		stack = true,
 		close = true,
 		description = nil,
 	},
 	['steel'] = {
-		label = 'Steel',
-		weight = 20,
+		label = 'Acciaio',
+		weight = 100,
 		stack = true,
 		close = true,
 		description = nil,
 	},
 	['polyester'] = {
-		label = 'Polyester',
-		weight = 20,
+		label = 'Polisetere',
+		weight = 100,
 		stack = true,
 		close = true,
 		description = nil,
 	},
 	['bottle'] = {
-		label = 'Bottle',
-		weight = 20,
+		label = 'Bombola vuota',
+		weight = 100,
 		stack = true,
 		close = true,
 		description = nil,
 	},
 	['methane'] = {
-		label = 'Methane',
-		weight = 20,
+		label = 'Bombola di metano',
+		weight = 100,
 		stack = true,
 		close = true,
 		description = nil,
 	},
 	['chip'] = {
 		label = 'Chip',
-		weight = 20,
+		weight = 100,
 		stack = true,
 		close = true,
 		description = nil,
 	},
 	['board'] = {
-		label = 'Board',
-		weight = 20,
+		label = 'Scheda elettronica',
+		weight = 100,
 		stack = true,
 		close = true,
 		description = nil,
 	},
 
 	['copper'] = {
-		label = 'copper',
-		weight = 20,
-		stack = true,
-	},
-
-	['iron'] = {
-		label = 'iron',
-		weight = 20,
+		label = 'Rame',
+		weight = 100,
 		stack = true,
 	},
 
 	['aluminum'] = {
-		label = 'aluminum',
-		weight = 20,
+		label = 'Alluminio',
+		weight = 100,
+		stack = true,
+	},
+	['titanium'] = {
+		label = 'Titanio',
+		weight = 100,
 		stack = true,
 	},
 
@@ -6651,6 +6894,31 @@ return {
         close = true,
     },
 
-
+	['poster'] = {
+		label = 'poster',
+		weight = 1,
+		stack = false,
+		close = true
+	},
+	
+	['oil'] = {
+		label = 'Petrolio',
+		weight = 5000,
+		stack = false,
+		close = true
+	},
+	['refined_oil'] = {
+		label = 'Petrolio raffinato',
+		weight = 5000,
+		stack = false,
+		close = true
+	},
+	['fuel'] = {
+		label = 'Carburante',
+		weight = 5000,
+		stack = false,
+		close = true
+	},
+	
 	
 }

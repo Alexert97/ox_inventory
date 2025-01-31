@@ -74,7 +74,7 @@ return {
 		[8] = {5, 40000},		-- Motorcycle
 		[9] = {51, 408000},		-- Offroad
 		[10] = {51, 408000},	-- Industrial
-		[11] = {41, 328000},	-- Utility
+		[11] = {75, 328000},	-- Utility
 		[12] = {61, 488000},	-- Van
 		-- [14] -- Boat
 		-- [15] -- Helicopter
