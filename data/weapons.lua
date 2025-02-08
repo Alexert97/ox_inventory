@@ -487,7 +487,7 @@ return {
 
 		['WEAPON_PETROLCAN'] = {
 			label = 'Jerry Can',
-			weight = 4000,
+			weight = 500,
 		},
 
 		['WEAPON_GADGETPISTOL'] = {

@@ -4,8 +4,8 @@ return {
 		blip = {
 			id = 59, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'pizza', price = 80 },
-			{ name = 'acqua', price = 70 },
+			{ name = 'sandwich', price = 15 },
+			{ name = 'acqua', price = 15 },
 			{ name = 'redwoods', price = 8 , metadata = {total = 20}},		
 			{ name = 'lighter', price = 5 },
 			{ name = 'grinder', price = 15 },
@@ -179,7 +179,7 @@ return {
 	LaFitness = {
 		name = 'La Fitness Gym',
 		inventory = {
-			{ name = 'gym_membership_laf', price = 1000},
+			{ name = 'gym_membership_laf', price = 500},
 			{ name = 'monster', price = 30},
 		},
 		locations = {

@@ -138,6 +138,12 @@ return {
 		stack = true,
 		description = "Strumento affilato utilizzato per fare incisioni precise nei tessuti.",
 	},
+	['rene'] = {
+		label = 'Rene',
+		weight = 50,
+		stack = true,
+		description = "",
+	},
 	['pinza_emostatica'] = {
 		label = 'Pinza emostatica',
 		weight = 300,
@@ -210,45 +216,46 @@ return {
 		stack = true,
 		description = "Kit completo per suturare le ferite esterne.",
 	},
-	--[[
-                stabilizzatore cervicale
-                stabilizzatore piedi
-                trapano cranico
-            ]]
-
 
 	['stabilizzatore_cervicale'] = {
 		label = 'Stabilizzatore cervicale',
-		weight = 100,
+		weight = 500,
 		stack = true,
 		description = "Strumento utilizzato per stabilizzare la colonna vertebrale durante la gestione dei traumi.",
 	},
 
-    ['stabilizzatore_piedi'] = {
-        label = 'Stabilizzatore piedi',
-        weight = 100,
+	['stabilizzatore_piedi'] = {
+		label = 'Stabilizzatore piedi',
+		weight = 300,
 		stack = true,
 		description = "Strumento utilizzato per stabilizzare i piedi durante la gestione dei traumi.",
 	},
 	
 	['trapano_cranico'] = {
-        label = 'Trapano cranico',
-        weight = 100,
-        stack = true,
+		label = 'Trapano cranico',
+		weight = 1500,
+		stack = true,
 		description = "Strumento utilizzato per praticare un foro nel cranio per la chirurgia cerebrale.",
+	},
+
+	['drenaggio_toracico'] = {
+		label = 'Drenaggio toracico',
+		weight = 200,
+		stack = true,
+		description = "Tubo utilizzato per drenare l'aria o il liquido dal torace.",
 	},
 
 	
 	['burncream'] = {
 		label = 'Crema per Ustioni',
-		weight = 100,
+		weight = 50,
 		stack = true,
 		description = "Crema specializzata per trattare e lenire ustioni minori e irritazioni cutanee.",
 	},
 	
 	['suturekit'] = {
 		label = 'Kit di Sutura',
-		weight = 100,
+		weight = 300,
 		stack = true,
 		description = "Un kit contenente strumenti chirurgici e materiali per suturare e chiudere le ferite.",
 	},
@@ -290,11 +297,100 @@ return {
 			export = 'ox_mdt.openMDT'
 		}
 	},
+	['metaldetector'] = {
+		label = 'Metal Detector',
+		weight = 1200,
+		stack = true,
+	},
+	['brokendetector'] = {
+		label = 'Metal Detector rotto',
+		weight = 1200,
+		stack = true,
+	},
+	['aincientcoin'] = {
+		label = 'Moneta Antica',
+		weight = 50,
+		stack = true,
+	},
+	['aluminiumcan'] = {
+		label = 'Barattolo in alluminio',
+		weight = 100,
+		stack = true,
+	},
+	['antiquecoin'] = {
+		label = 'Moneta Antica',
+		weight = 50,
+		stack = true,
+	},
+	['brokengameboy'] = {
+		label = 'Game Boy rotto',
+		weight = 150,
+		stack = true,
+	},
+	['brokenknife'] = {
+		label = 'Coltello rotto',
+		weight = 100,
+		stack = true,
+	},
+	['brokenphone'] = {
+		label = 'Telefono rotto',
+		weight = 150,
+		stack = true,
+	},
+	['BulletCasings'] = {
+		label = 'Bossolo di proiettile',
+		weight = 5,
+		stack = true,
+	},
+	['burriedtreasure'] = {
+		label = 'Cassa malconcia',
+		weight = 900,
+		stack = true,
+	},
+	['goldcoin'] = {
+		label = "Moneta d'oro",
+		weight = 50,
+		stack = true,
+	},
+	['goldnugget'] = {
+		label = 'Pepita d\'oro',
+		weight = 50,
+		stack = true,
+	},
+	['irontrash'] = {
+		label = 'Ferro',
+		weight = 300,
+		stack = true,
+	},
+	['metaltrash'] = {
+		label = 'Oggetti metallici',
+		weight = 300,
+		stack = true,
+	},
+	['pocketwatch'] = {
+		label = 'Orologio da taschino',
+		weight = 150,
+		stack = true,
+	},
+	['steelcan'] = {
+		label = 'Barattolo in acciaio',
+		weight = 150,
+		stack = true,
+	},
+	['treasurekey'] = {
+		label = 'Chiave del tesoro',
+		weight = 75,
+		stack = true,
+	},
+	['ww2relic'] = {
+		label = 'Reliquia della seconda guerra mondiale',
+		weight = 700,
+		stack = true,
+	},
 
 	['burger'] = {
 		label = 'Hamburger',
 		weight = 220,
-		consume = 0.50,
 		client = {
 			status = { hunger = 400000 },
 			anim = 'eating',
@@ -307,7 +403,6 @@ return {
 	['sprunk'] = {
 		label = 'Sprunk',
 		weight = 350,
-		consume = 0.50,
 		client = {
 			status = { thirst = 400000 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -360,7 +455,6 @@ return {
 	['water'] = {
 		label = 'Acqua',
 		weight = 500,
-		consume = 0.50,
 		client = {
 			status = { thirst = 400000 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -1259,13 +1353,13 @@ return {
 			weight = 0.00,
 			stack = false,
 			close = true,
-		},
+		},]]
 		['coupon3'] = {
 			label = "Coupon Acquisto Ufficio",
 			weight = 0.00,
 			stack = false,
 			close = true,
-		},]]
+		},
 		['book'] = {
 			label = "Manuale",
 			weight = 0.00,
@@ -1348,7 +1442,7 @@ return {
 	
 	["powerbank"] = {
 		label = "Power Bank",
-		weight = 50,
+		weight = 200,
 		stack = false,
 	},
 	
@@ -1471,7 +1565,7 @@ return {
 	
 		['gopro'] = {
 			label = 'Gopro',
-			weight = 1000,
+			weight = 500,
 			stack = false,
 			allowArmed = true,
 			server = {
@@ -1523,7 +1617,7 @@ return {
 	
 		['svapa'] = {
 			label = 'Svapo',
-			weight = 1000,
+			weight = 100,
 			stack = false,
 			allowArmed = true
 		},
@@ -2070,42 +2164,42 @@ return {
 		--ANELLI
 			['anello1'] = {
 				label = 'Anello Matrimoniale',
-				weight = 1,
+				weight = 100,
 				stack = false,
 				allowArmed = true
 			},
 		
 			['anello2'] = {
 				label = 'Gemelli Matrimoniali',
-				weight = 1,
+				weight = 100,
 				stack = false,
 				allowArmed = true
 			},
 		
 			['anello3'] = {
 				label = 'Gemelli Rose',
-				weight = 1,
+				weight = 100,
 				stack = false,
 				allowArmed = true
 			},
 		
 			['anello4'] = {
 				label = 'Gemelli Diamantati',
-				weight = 1,
+				weight = 100,
 				stack = false,
 				allowArmed = true
 			},
 		
 			['anello5'] = {
 				label = 'Gemelli Dorati',
-				weight = 1,
+				weight = 100,
 				stack = false,
 				allowArmed = true
 			},
 		
 			['anello6'] = {
 				label = 'Gemelli Argentati',
-				weight = 1,
+				weight = 100,
 				stack = false,
 				allowArmed = true
 			},
@@ -2123,49 +2217,49 @@ return {
 	
 		['orologiotascabile'] = {
 			label = 'Orologio da Collezione',
-			weight = 1,
+			weight = 100,
 			stack = false,
 			allowArmed = true
 		},
 	
 		['rolex1'] = {
 			label = 'Rolex Diamantato',
-			weight = 1,
+			weight = 100,
 			stack = false,
 			allowArmed = true
 		},
 	
 		['rolex2'] = {
 			label = 'Rolex Black',
-			weight = 1,
+			weight = 100,
 			stack = false,
 			allowArmed = true
 		},
 	
 		['rolex3'] = {
 			label = 'Rolex zaffiro',
-			weight = 1,
+			weight = 100,
 			stack = false,
 			allowArmed = true
 		},
 	
 		['rolex4'] = {
 			label = 'Rolex Gold',
-			weight = 1,
+			weight = 100,
 			stack = false,
 			allowArmed = true
 		},
 	
 		['rolex5'] = {
 			label = 'Rolex Rose',
-			weight = 1,
+			weight = 100,
 			stack = false,
 			allowArmed = true
 		},
 	
 		['rolex6'] = {
 			label = 'Rolex',
-			weight = 1,
+			weight = 100,
 			stack = false,
 			allowArmed = true
 		},
@@ -2223,7 +2317,6 @@ return {
 				weight = 520.0,
 				stack = true,
 				close = true,
-				consume = 0.1,
 				client = {
 					status = { thirst = 20000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -2239,7 +2332,6 @@ return {
 				weight = 1000,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 500000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -2255,7 +2347,6 @@ return {
 				weight = 520,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 200000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -2271,7 +2362,6 @@ return {
 				weight = 1000,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 500000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -2287,7 +2377,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 400000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -2303,7 +2392,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 300000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -2319,7 +2407,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 300000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -2335,7 +2422,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 300000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -2351,7 +2437,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 400000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -2367,7 +2452,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 400000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -2383,7 +2467,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 400000, stamina= -(math.random() / 15)  },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -2401,7 +2484,6 @@ return {
 				weight = 350,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 400000, stamina= -(math.random() / 15)  },
@@ -2418,7 +2500,6 @@ return {
 				weight = 350,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 400000 },
@@ -2435,7 +2516,6 @@ return {
 				weight = 350,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 300000 },
@@ -2452,7 +2532,6 @@ return {
 				weight = 350,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 500000 },
@@ -2469,7 +2548,6 @@ return {
 				weight = 350,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 300000 },
@@ -2486,7 +2564,6 @@ return {
 				weight = 350,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 400000, stamina= -(math.random() / 15)  },
@@ -2503,7 +2580,6 @@ return {
 				weight = 350,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 200000 },
@@ -2520,7 +2596,6 @@ return {
 				weight = 350,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 100000 },
@@ -2537,7 +2612,6 @@ return {
 				weight = 350,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 100000, stamina= -(math.random() / 15)  },
@@ -2554,7 +2628,6 @@ return {
 				weight = 350,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 200000 },
@@ -2571,7 +2644,6 @@ return {
 				weight = 350,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 300000, stamina= -(math.random() / 15)  },
@@ -2588,7 +2660,6 @@ return {
 				weight = 350,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 600000 },
@@ -2605,7 +2676,6 @@ return {
 				weight = 350,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 300000, stamina= -(math.random() / 15)  },
@@ -2622,7 +2692,6 @@ return {
 				weight = 350,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 200000 },
@@ -2639,7 +2708,6 @@ return {
 				weight = 350,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 400000 },
@@ -2656,7 +2724,6 @@ return {
 				weight = 350,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 400000 },
@@ -2673,7 +2740,6 @@ return {
 				weight = 350,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 400000, stamina= -(math.random() / 15)  },
@@ -2691,7 +2757,6 @@ return {
 				weight = 350,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 400000 },
@@ -2708,7 +2773,6 @@ return {
 				weight = 350,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 300000 },
@@ -2725,7 +2789,6 @@ return {
 				weight = 350,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 200000, stamina= -(math.random() / 15)  },
@@ -2744,7 +2807,6 @@ return {
 				weight = 270,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 500000, stamina= -(math.random() / 15)  },
@@ -2761,7 +2823,6 @@ return {
 				weight = 270,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 500000, stamina= -(math.random() / 15)  },
@@ -2778,7 +2839,6 @@ return {
 				weight = 270,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 500000, stamina= -(math.random() / 15)  },
@@ -2795,7 +2855,6 @@ return {
 				weight = 270,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 500000, stamina= -(math.random() / 15)  },
@@ -2812,7 +2871,6 @@ return {
 				weight = 270,
 				stack = true,
 				close = true,
-				consume = 0.20,
 				degrade= 10080,
 				client = {
 					status = { thirst = 500000, stamina= -(math.random() / 15)  },
@@ -2829,7 +2887,6 @@ return {
 				weight = 270,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 10080,
 				client = {
 					status = { thirst = 500000, stamina= -(math.random() / 15)  },
@@ -2848,7 +2905,6 @@ return {
 				weight = 100,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000 },
@@ -2865,7 +2921,6 @@ return {
 				weight = 100,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000 },
@@ -2882,7 +2937,6 @@ return {
 				weight = 100,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000 },
@@ -2899,7 +2953,6 @@ return {
 				weight = 100,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000 },
@@ -2916,7 +2969,6 @@ return {
 				weight = 100,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000 },
@@ -2933,7 +2985,6 @@ return {
 				weight = 100,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000 },
@@ -2952,7 +3003,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000, stamina= -(math.random() / 15)  },
@@ -2969,7 +3019,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000, stamina= -(math.random() / 15)  },
@@ -2986,7 +3035,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000, stamina= -(math.random() / 15)  },
@@ -3003,7 +3051,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000, stamina= -(math.random() / 15)  },
@@ -3020,7 +3067,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000 },
@@ -3037,7 +3083,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000 },
@@ -3054,7 +3099,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000, stamina= -(math.random() / 15)  },
@@ -3071,7 +3115,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000 },
@@ -3088,7 +3131,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000, stamina= -(math.random() / 15)  },
@@ -3105,7 +3147,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000, stamina= -(math.random() / 15)  },
@@ -3122,7 +3163,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000, stamina= -(math.random() / 15)  },
@@ -3139,7 +3179,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000 },
@@ -3156,7 +3195,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000, stamina= -(math.random() / 15)  },
@@ -3173,7 +3211,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000 },
@@ -3190,7 +3227,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000, stamina= -(math.random() / 15)  },
@@ -3207,7 +3243,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000, stamina= -(math.random() / 15)  },
@@ -3224,7 +3259,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000 },
@@ -3241,7 +3275,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000, stamina= -(math.random() / 15)  },
@@ -3258,7 +3291,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000 },
@@ -3275,7 +3307,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000, stamina= -(math.random() / 15)  },
@@ -3292,7 +3323,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000, stamina= -(math.random() / 15)  },
@@ -3310,7 +3340,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000 },
@@ -3327,7 +3356,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000, stamina= -(math.random() / 15)  },
@@ -3344,7 +3372,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000 },
@@ -3361,7 +3388,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000, stamina= -(math.random() / 15)  },
@@ -3378,7 +3404,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 1440,
 				client = {
 					status = { thirst = 200000, stamina= -(math.random() / 15)  },
@@ -3397,7 +3422,6 @@ return {
 				weight = 750,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 4320,
 				client = {
 					status = { thirst = 400000 },
@@ -3414,7 +3438,6 @@ return {
 				weight = 750,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 4320,
 				client = {
 					status = { thirst = 400000 },
@@ -3431,7 +3454,6 @@ return {
 				weight = 750,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 4320,
 				client = {
 					status = { thirst = 400000 },
@@ -3448,7 +3470,6 @@ return {
 				weight = 250,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 4320,
 				client = {
 					status = { thirst = 200000 },
@@ -3465,7 +3486,6 @@ return {
 				weight = 250,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 4320,
 				client = {
 					status = { thirst = 200000 },
@@ -3482,7 +3502,6 @@ return {
 				weight = 250,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 4320,
 				client = {
 					status = { thirst = 200000 },
@@ -3501,7 +3520,6 @@ return {
 				weight = 600,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000, stamina= -(math.random() / 15)  },
@@ -3518,7 +3536,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000, stamina= -(math.random() / 15)  },
@@ -3535,7 +3552,6 @@ return {
 				weight = 600,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000, stamina= -(math.random() / 15)  },
@@ -3552,7 +3568,6 @@ return {
 				weight = 600,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000, stamina= -(math.random() / 15)  },
@@ -3569,7 +3584,6 @@ return {
 				weight = 600,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000 },
@@ -3586,7 +3600,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000, stamina= -(math.random() / 15)  },
@@ -3603,7 +3616,6 @@ return {
 				weight = 600,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000 },
@@ -3620,7 +3632,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000, stamina= -(math.random() / 15)  },
@@ -3637,7 +3648,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000 },
@@ -3654,7 +3664,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000, stamina= -(math.random() / 15)  },
@@ -3671,7 +3680,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000 },
@@ -3688,7 +3696,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000, stamina= -(math.random() / 15)  },
@@ -3705,7 +3712,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000, stamina= -(math.random() / 15)  },
@@ -3722,7 +3728,6 @@ return {
 				weight = 600,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000 },
@@ -3739,7 +3744,6 @@ return {
 				weight = 300,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000, stamina= -(math.random() / 15)  },
@@ -3758,7 +3762,6 @@ return {
 				weight = 750,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 200000 },
@@ -3775,7 +3778,6 @@ return {
 				weight = 750,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000 },
@@ -3792,7 +3794,6 @@ return {
 				weight = 750,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 200000 },
@@ -3809,7 +3810,6 @@ return {
 				weight = 750,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 400000 },
@@ -3826,7 +3826,6 @@ return {
 				weight = 750,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000 },
@@ -3843,7 +3842,6 @@ return {
 				weight = 750,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 400000 },
@@ -3860,7 +3858,6 @@ return {
 				weight = 750,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 200000 },
@@ -3877,7 +3874,6 @@ return {
 				weight = 750,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 400000 },
@@ -3894,7 +3890,6 @@ return {
 				weight = 750,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 400000 },
@@ -3911,8 +3906,6 @@ return {
 				weight = 750,
 				stack = true,
 				close = true,
-				consume = 0.50,
-				
 				client = {
 					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -3930,7 +3923,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -3946,7 +3938,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -3962,7 +3953,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -3978,7 +3968,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -3994,7 +3983,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -4010,7 +3998,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -4026,7 +4013,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -4042,7 +4028,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -4058,7 +4043,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -4074,7 +4058,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -4090,7 +4073,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -4106,7 +4088,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -4122,7 +4103,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -4138,7 +4118,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -4154,7 +4133,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -4170,7 +4148,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				client = {
 					status = { thirst = 100000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -4188,7 +4165,6 @@ return {
 				weight = 250,
 				stack = true,
 				close = true,
-				consume= 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 400000 },
@@ -4205,7 +4181,6 @@ return {
 				weight = 250,
 				stack = true,
 				close = true,
-				consume= 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000, stamina= -(math.random() / 15)  },
@@ -4222,7 +4197,6 @@ return {
 				weight = 250,
 				stack = true,
 				close = true,
-				consume= 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 400000, stamina= -(math.random() / 15)  },
@@ -4239,7 +4213,6 @@ return {
 				weight = 250,
 				stack = true,
 				close = true,
-				consume= 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000 },
@@ -4256,7 +4229,6 @@ return {
 				weight = 250,
 				stack = true,
 				close = true,
-				consume= 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 400000, stamina= -(math.random() / 15)  },
@@ -4273,7 +4245,6 @@ return {
 				weight = 250,
 				stack = true,
 				close = true,
-				consume= 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000, stamina= -(math.random() / 15)  },
@@ -4290,7 +4261,6 @@ return {
 				weight = 250,
 				stack = true,
 				close = true,
-				consume= 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 400000, stamina= -(math.random() / 15)  },
@@ -4307,7 +4277,6 @@ return {
 				weight = 250,
 				stack = true,
 				close = true,
-				consume= 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000 },
@@ -4324,7 +4293,6 @@ return {
 				weight = 250,
 				stack = true,
 				close = true,
-				consume= 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 400000 },
@@ -4341,7 +4309,6 @@ return {
 				weight = 250,
 				stack = true,
 				close = true,
-				consume= 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000, stamina= -(math.random() / 15)  },
@@ -4358,7 +4325,6 @@ return {
 				weight = 250,
 				stack = true,
 				close = true,
-				consume= 0.50,
 				degrade= 2880,
 				client = {
 					status = { thirst = 100000 },
@@ -4381,7 +4347,6 @@ return {
 				stack = true,
 				close = true,
 				degrade = 2880,
-				consume = 0.50,
 				client = { 
 					status = { hunger = 400000, stamina= -(math.random() / 15) },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -4397,7 +4362,6 @@ return {
 				weight = 80,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 2880,
 				client = {
 					status = { hunger = 200000 },
@@ -4414,7 +4378,6 @@ return {
 				weight = 100,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 2880,
 				client = {
 					status = { hunger = 300000 },
@@ -4431,7 +4394,6 @@ return {
 				weight = 100,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 2880,
 				client = {
 					status = { hunger = 100000 },
@@ -4448,7 +4410,6 @@ return {
 				weight = 120,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 200000 },
@@ -4465,7 +4426,6 @@ return {
 				weight = 150,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 600000, stamina= -(math.random() / 15)  },
@@ -4482,7 +4442,6 @@ return {
 				weight = 130,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 600000, stamina= -(math.random() / 15)  },
@@ -4501,7 +4460,6 @@ return {
 				weight = 80,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 100000 },
@@ -4518,7 +4476,6 @@ return {
 				weight = 80,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 200000 },
@@ -4535,7 +4492,6 @@ return {
 				weight = 80,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 200000 },
@@ -4552,7 +4508,6 @@ return {
 				weight = 80,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 100000 },
@@ -4569,7 +4524,6 @@ return {
 				weight = 80,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 100000 },
@@ -4586,7 +4540,6 @@ return {
 				weight = 80,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 200000 },
@@ -4603,7 +4556,6 @@ return {
 				weight = 100,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 100000 },
@@ -4620,7 +4572,6 @@ return {
 				weight = 110,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 300000 },
@@ -4637,7 +4588,6 @@ return {
 				weight = 250,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 700000, stamina= -(math.random() / 15)  },
@@ -4656,7 +4606,6 @@ return {
 				weight = 180,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 400000 },
@@ -4673,7 +4622,6 @@ return {
 				weight = 180,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 400000 },
@@ -4690,7 +4638,6 @@ return {
 				weight = 180,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 400000 },
@@ -4707,7 +4654,6 @@ return {
 				weight = 180,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 400000 },
@@ -4724,7 +4670,6 @@ return {
 				weight = 180,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 400000 },
@@ -4743,7 +4688,6 @@ return {
 				weight = 150,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 2880,
 				client = {
 					status = { hunger = 300000 },
@@ -4760,7 +4704,6 @@ return {
 				weight = 200,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 300000 },
@@ -4777,7 +4720,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 700000 },
@@ -4796,7 +4738,6 @@ return {
 				weight = 250,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 2880,
 				client = {
 					status = { hunger = 800000, stamina= -(math.random() / 15)  },
@@ -4813,7 +4754,6 @@ return {
 				weight = 500,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 2880,
 				client = {
 					status = { hunger = 500000 },
@@ -4830,7 +4770,6 @@ return {
 				weight = 160,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 2880,
 				client = {
 					status = { hunger = 500000, stamina= -(math.random() / 15)  },
@@ -4847,7 +4786,6 @@ return {
 				weight = 80,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 2880,
 				client = {
 					status = { hunger = 200000 },
@@ -4866,7 +4804,6 @@ return {
 				weight = 90,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 2880,
 				client = {
 					status = { hunger = 200000 },
@@ -4883,7 +4820,6 @@ return {
 				weight = 100,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 2880,
 				client = {
 					status = { hunger = 300000 },
@@ -4900,7 +4836,6 @@ return {
 				weight = 70,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 2880,
 				client = {
 					status = { hunger = 300000 },
@@ -4919,7 +4854,6 @@ return {
 				weight = 100,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 2880,
 				client = {
 					status = { hunger = 800000 },
@@ -4936,7 +4870,6 @@ return {
 				weight = 90,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 2880,
 				client = {
 					status = { hunger = 800000, stamina= -(math.random() / 15)  },
@@ -4953,7 +4886,6 @@ return {
 				weight = 80,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 2880,
 				client = {
 					status = { hunger = 100000 },
@@ -4972,7 +4904,6 @@ return {
 				weight = 260,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 600000 },
@@ -4990,7 +4921,6 @@ return {
 				stack = true,
 				close = true,
 				degrade = 1440,
-				consume = 0.50,
 				client = {
 					status = { hunger = 500000 },
 					anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
@@ -5006,7 +4936,6 @@ return {
 				weight = 250,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 800000 },
@@ -5023,7 +4952,6 @@ return {
 				weight = 250,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 900000 },
@@ -5040,7 +4968,6 @@ return {
 				weight = 200,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 1000000, stamina= -(math.random() / 15)  },
@@ -5057,7 +4984,6 @@ return {
 				weight = 180,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 800000, stamina= -(math.random() / 15)  },
@@ -5074,7 +5000,6 @@ return {
 				weight = 250,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 600000, stamina= -(math.random() / 15)  },
@@ -5092,7 +5017,6 @@ return {
 				weight = 10,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 100000, stamina= -(math.random() / 15)  },
@@ -5109,7 +5033,6 @@ return {
 				weight = 10,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 100000 },
@@ -5126,7 +5049,6 @@ return {
 				weight = 100,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 100000, stamina= -(math.random() / 15)  },
@@ -5143,7 +5065,6 @@ return {
 				weight = 100,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 100000 },
@@ -5160,7 +5081,6 @@ return {
 				weight = 150,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 100000, stamina= -(math.random() / 15)  },
@@ -5177,7 +5097,6 @@ return {
 				weight = 150,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 200000, stamina= -(math.random() / 15)  },
@@ -5196,7 +5115,6 @@ return {
 				weight = 100,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 300000, stamina= -(math.random() / 15)  },
@@ -5213,7 +5131,6 @@ return {
 				weight = 100,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 300000, stamina= -(math.random() / 15)  },
@@ -5230,7 +5147,6 @@ return {
 				weight = 100,
 				stack = true,
 				close = true,
-				consume = 0.50,
 				degrade = 1440,
 				client = {
 					status = { hunger = 300000, stamina= -(math.random() / 15)  },
@@ -5353,7 +5269,10 @@ return {
 		weight = 1,
 		stack = true,
 		close = true,
-		description = "\"An item\""
+		description = "\"An item\"",
+		client = {
+			export = "xert_stancer.OpenStancer"
+		}
 	},
 
 	["nos"] = {
